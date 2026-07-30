@@ -1,0 +1,2381 @@
+{
+  "schema": "python.curriculum-source-manifest.v1",
+  "source_repository": "https://github.com/exercism/python",
+  "source_commit": "250bf19050543da09e122211fc7430fe6f44c564",
+  "included": {
+    "concepts": 67,
+    "concept_exercises": 20,
+    "practice_exercises": 140
+  },
+  "excluded": {
+    "deprecated_concept_exercises": [
+      "electric-bill"
+    ],
+    "track_maintenance_infrastructure": true
+  },
+  "entries": [
+    {
+      "id": "concept:basics",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/00-orientation/concepts/basics",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "700632738c2b5028b09fdc1137321877bf4e0e6d7c99412d59c329a9491e3f72"
+    },
+    {
+      "id": "concept:testing",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/00-orientation/concepts/testing",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept-exercise:guidos-gorgeous-lasagna",
+      "kind": "concept-exercise",
+      "tier": "core",
+      "path": "stages/00-orientation/exercises/concept/guidos-gorgeous-lasagna",
+      "mutable": [
+        "lasagna.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "cf6f607603158f3c7ef4db88732b07437dfd5476dcddf0d6a8c39351c2913baa"
+    },
+    {
+      "id": "practice:hello-world",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/00-orientation/exercises/practice/hello-world",
+      "mutable": [
+        "hello_world.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "e8e2c57bf28c731b3047327e11b9c435381a0027f3665ade41eb43e9f5fe6c18"
+    },
+    {
+      "id": "concept:bools",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/01-scalars-control-flow/concepts/bools",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "f0872bdf704f152219f199bd3d08c96f08f71c4fc2dc73e2ddd783ef485ce7e6"
+    },
+    {
+      "id": "concept:comparisons",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/01-scalars-control-flow/concepts/comparisons",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "1d4b875a044fe0152670eb13f6db3ac45662d3658f407dab3f1cfc268ddd5278"
+    },
+    {
+      "id": "concept:conditionals",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/01-scalars-control-flow/concepts/conditionals",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "930f78b4c4f821b151087d7ab25119dcbf1a59d45070a1b0be3be86e98fb9063"
+    },
+    {
+      "id": "concept:none",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/01-scalars-control-flow/concepts/none",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "219f40607cce72cb747ee65f8f6f42bc56f68ffd778f6c3e348c3e0b4404f3f7"
+    },
+    {
+      "id": "concept:numbers",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/01-scalars-control-flow/concepts/numbers",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "79c40779dc8d49ddfd5e248d0ec8fbd0b22f4c2ab8a246ff2ad43dd3d3a38d8c"
+    },
+    {
+      "id": "concept:binary-octal-hexadecimal",
+      "kind": "concept",
+      "tier": "extension",
+      "path": "stages/01-scalars-control-flow/concepts/binary-octal-hexadecimal",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "9b032a28ce10116a370f51f82e2a6648bda893d2729cc86cf4932982ffd2a47c"
+    },
+    {
+      "id": "concept:bitflags",
+      "kind": "concept",
+      "tier": "extension",
+      "path": "stages/01-scalars-control-flow/concepts/bitflags",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "c7701e162c1b32da6afdce62d127ed6a5b9b815a61b6e8e451cf4ed7200271b8"
+    },
+    {
+      "id": "concept:bitwise-operators",
+      "kind": "concept",
+      "tier": "extension",
+      "path": "stages/01-scalars-control-flow/concepts/bitwise-operators",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "7d082a6999ac2134bd6db12fd5c9769072609e2e48cdda4ee5a87fffdb1cdf51"
+    },
+    {
+      "id": "concept:number-variations",
+      "kind": "concept",
+      "tier": "extension",
+      "path": "stages/01-scalars-control-flow/concepts/number-variations",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept-exercise:black-jack",
+      "kind": "concept-exercise",
+      "tier": "core",
+      "path": "stages/01-scalars-control-flow/exercises/concept/black-jack",
+      "mutable": [
+        "black_jack.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "49e7edb8881f73e1e67370d2769aae7b6a9817c4bd071e83c23c144c69398094"
+    },
+    {
+      "id": "concept-exercise:currency-exchange",
+      "kind": "concept-exercise",
+      "tier": "core",
+      "path": "stages/01-scalars-control-flow/exercises/concept/currency-exchange",
+      "mutable": [
+        "exchange.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "32548dabcbd0a12b7e63e6a0a68b67f21140960d6fb58b0dd3d51649de157160"
+    },
+    {
+      "id": "concept-exercise:ghost-gobble-arcade-game",
+      "kind": "concept-exercise",
+      "tier": "core",
+      "path": "stages/01-scalars-control-flow/exercises/concept/ghost-gobble-arcade-game",
+      "mutable": [
+        "arcade_game.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "561b191f895fbfccc7a3af1385d390436874502ea06f8ba7d7142e9c9d838183"
+    },
+    {
+      "id": "concept-exercise:meltdown-mitigation",
+      "kind": "concept-exercise",
+      "tier": "core",
+      "path": "stages/01-scalars-control-flow/exercises/concept/meltdown-mitigation",
+      "mutable": [
+        "conditionals.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "23beaa512f586da97eba35db4d2b2d3131db6c1a8c0d979601afea366e63e5be"
+    },
+    {
+      "id": "practice:grains",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/01-scalars-control-flow/exercises/practice/grains",
+      "mutable": [
+        "grains.py"
+      ],
+      "immutable_files": 20,
+      "sha256": "2c72d98b1e9daadd3b2cf171997efff8d6195e3abe4543afcf74f26b0654dd74"
+    },
+    {
+      "id": "practice:leap",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/01-scalars-control-flow/exercises/practice/leap",
+      "mutable": [
+        "leap.py"
+      ],
+      "immutable_files": 21,
+      "sha256": "49a473754fc24f5f0af1d76188ee748d81308647c69c8ae35636578949ccbce9"
+    },
+    {
+      "id": "practice:darts",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/01-scalars-control-flow/exercises/practice/darts",
+      "mutable": [
+        "darts.py"
+      ],
+      "immutable_files": 21,
+      "sha256": "996f293456c95a42c91f2538db0f0b95f1388949b5be103b03c4b9a04914f374"
+    },
+    {
+      "id": "practice:raindrops",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/01-scalars-control-flow/exercises/practice/raindrops",
+      "mutable": [
+        "raindrops.py"
+      ],
+      "immutable_files": 28,
+      "sha256": "0e25d9a2853107100b9f824f55b87372613c0cb6a1569755b0483e492b769f3f"
+    },
+    {
+      "id": "practice:binary",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/01-scalars-control-flow/exercises/practice/binary",
+      "mutable": [
+        "binary.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "6821544ec2815853369133c187e38623a07e04aaffd6eaec784c465052d3a645"
+    },
+    {
+      "id": "practice:armstrong-numbers",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/01-scalars-control-flow/exercises/practice/armstrong-numbers",
+      "mutable": [
+        "armstrong_numbers.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "6207ae99333df897857e161f69fa434468344eda71c88c801bf5d6a80704319f"
+    },
+    {
+      "id": "practice:bob",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/01-scalars-control-flow/exercises/practice/bob",
+      "mutable": [
+        "bob.py"
+      ],
+      "immutable_files": 19,
+      "sha256": "c89727ce836222cc2b8c36282950734a9ace326e11b5577c2a72642d9b79009a"
+    },
+    {
+      "id": "practice:collatz-conjecture",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/01-scalars-control-flow/exercises/practice/collatz-conjecture",
+      "mutable": [
+        "collatz_conjecture.py"
+      ],
+      "immutable_files": 20,
+      "sha256": "3eccb7365b450478e521f5eb9c1913f3bf168844a32d679393ba5f371ef7a4c1"
+    },
+    {
+      "id": "practice:triangle",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/01-scalars-control-flow/exercises/practice/triangle",
+      "mutable": [
+        "triangle.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "c800096af950a1c66700511338b3226b996aff0fe1e2f97a7f6b9bc4bd2916ea"
+    },
+    {
+      "id": "practice:perfect-numbers",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/01-scalars-control-flow/exercises/practice/perfect-numbers",
+      "mutable": [
+        "perfect_numbers.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "655d78c8b2565ad72598c07e49a66b9501bdd0d2c4ac78a6669599f382b6bbc7"
+    },
+    {
+      "id": "practice:pig-latin",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/01-scalars-control-flow/exercises/practice/pig-latin",
+      "mutable": [
+        "pig_latin.py"
+      ],
+      "immutable_files": 11,
+      "sha256": "aa5f02f197d0ba16b2624bbd9dbd3fed776ac188fa4ad593a3d26b109e6eed1e"
+    },
+    {
+      "id": "practice:hexadecimal",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/01-scalars-control-flow/exercises/practice/hexadecimal",
+      "mutable": [
+        "hexadecimal.py"
+      ],
+      "immutable_files": 4,
+      "sha256": "402f1e7f31ef7d7380ed604622b316bc355b36e451678fc5fafaa86f32c7531b"
+    },
+    {
+      "id": "practice:octal",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/01-scalars-control-flow/exercises/practice/octal",
+      "mutable": [
+        "octal.py"
+      ],
+      "immutable_files": 4,
+      "sha256": "2f7358324265e8a67bb222c02e5df957771e052762194f2156bc14736e488255"
+    },
+    {
+      "id": "practice:trinary",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/01-scalars-control-flow/exercises/practice/trinary",
+      "mutable": [
+        "trinary.py"
+      ],
+      "immutable_files": 5,
+      "sha256": "f9d6edd4bd3cf515952572143fae15f4b499480472e8f2b27fb449391ca6fc10"
+    },
+    {
+      "id": "concept:string-formatting",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/02-text-processing/concepts/string-formatting",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "f445c23e951db0d98dc6961a84c7906934049205dda09ae3424d5c72f9a28b31"
+    },
+    {
+      "id": "concept:string-methods",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/02-text-processing/concepts/string-methods",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "bd0d817df9ed2baae30a072e1cd5a7d448b147ed982ffe52829473d3a70cd9d5"
+    },
+    {
+      "id": "concept:strings",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/02-text-processing/concepts/strings",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "c31a8038f3ae9b6cce95082a06024fe3fb9fb64204ac4083db8267e21d8bfe85"
+    },
+    {
+      "id": "concept:binary-data",
+      "kind": "concept",
+      "tier": "extension",
+      "path": "stages/02-text-processing/concepts/binary-data",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "c7701e162c1b32da6afdce62d127ed6a5b9b815a61b6e8e451cf4ed7200271b8"
+    },
+    {
+      "id": "concept:bytes",
+      "kind": "concept",
+      "tier": "extension",
+      "path": "stages/02-text-processing/concepts/bytes",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "2170d301e4c54f55a585d0888ef2d23a283f51bb0921cc4df233d5fd298032e2"
+    },
+    {
+      "id": "concept:memoryview",
+      "kind": "concept",
+      "tier": "extension",
+      "path": "stages/02-text-processing/concepts/memoryview",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept:string-methods-splitting",
+      "kind": "concept",
+      "tier": "extension",
+      "path": "stages/02-text-processing/concepts/string-methods-splitting",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept:text-processing",
+      "kind": "concept",
+      "tier": "extension",
+      "path": "stages/02-text-processing/concepts/text-processing",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept-exercise:little-sisters-essay",
+      "kind": "concept-exercise",
+      "tier": "core",
+      "path": "stages/02-text-processing/exercises/concept/little-sisters-essay",
+      "mutable": [
+        "string_methods.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "9770e2083e54820456ad9a9df62df347f6182f9471d2b2c617a3a81b66ace23c"
+    },
+    {
+      "id": "concept-exercise:little-sisters-vocab",
+      "kind": "concept-exercise",
+      "tier": "core",
+      "path": "stages/02-text-processing/exercises/concept/little-sisters-vocab",
+      "mutable": [
+        "strings.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "70462f09a76930bc1a5a587d4576a667c2505b579364a71966845a7e57a1d466"
+    },
+    {
+      "id": "practice:isogram",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/02-text-processing/exercises/practice/isogram",
+      "mutable": [
+        "isogram.py"
+      ],
+      "immutable_files": 22,
+      "sha256": "6357ddb6ffb0d6e0d444aacdaeefb3d171df79ffaa32f4ec8a7f526e691d06e2"
+    },
+    {
+      "id": "practice:line-up",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/02-text-processing/exercises/practice/line-up",
+      "mutable": [
+        "line_up.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "6429ded4df901454437545979678c825d7d7277fde74a0145d923d2d57687e2d"
+    },
+    {
+      "id": "practice:pangram",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/02-text-processing/exercises/practice/pangram",
+      "mutable": [
+        "pangram.py"
+      ],
+      "immutable_files": 22,
+      "sha256": "212e90cdeecb44e44913442fbb304ecd74f1bfb01cbad9d64a5cfbdcd160214a"
+    },
+    {
+      "id": "practice:rotational-cipher",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/02-text-processing/exercises/practice/rotational-cipher",
+      "mutable": [
+        "rotational_cipher.py"
+      ],
+      "immutable_files": 20,
+      "sha256": "7b040f73e1b98bae6e46236b8a145eea6c604bfe41a302b0a91a2df35ed7225d"
+    },
+    {
+      "id": "practice:isbn-verifier",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/02-text-processing/exercises/practice/isbn-verifier",
+      "mutable": [
+        "isbn_verifier.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "c1beef9450038a085dc2ebdcfbaa076d5adc82c9907e4fc5c4e2155b39fc971c"
+    },
+    {
+      "id": "concept:generators",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/03-sequences-iteration/concepts/generators",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "168dc545c533a83a5c7d99c70a444192820fc26fc0dd4077b89c0cf817293f30"
+    },
+    {
+      "id": "concept:list-methods",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/03-sequences-iteration/concepts/list-methods",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "74c63b5eed0ff42c34db61ad17f0b8977a5d15a20a768ac62bcb316d826f6f62"
+    },
+    {
+      "id": "concept:lists",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/03-sequences-iteration/concepts/lists",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "0f08b2b9a9fb6cd949f6b5dc1e3abfcb8a75c500c10d3a5d7957b25008054dcb"
+    },
+    {
+      "id": "concept:loops",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/03-sequences-iteration/concepts/loops",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "01a4326d90823f71c508a86e337d738c8822029731fdfb57ff86f3eef25797a0"
+    },
+    {
+      "id": "concept:sequences",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/03-sequences-iteration/concepts/sequences",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept:tuples",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/03-sequences-iteration/concepts/tuples",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "15aadbe76d8c7bcd9751d3535705516cec346bc099977ed1dc18f4ca3b50be49"
+    },
+    {
+      "id": "concept:unpacking-and-multiple-assignment",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/03-sequences-iteration/concepts/unpacking-and-multiple-assignment",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "813d88e5ac3b93fc9f7d6fd3144feecca360b7aeef9b35ccb7b17888afa96cca"
+    },
+    {
+      "id": "concept:iteration",
+      "kind": "concept",
+      "tier": "extension",
+      "path": "stages/03-sequences-iteration/concepts/iteration",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept-exercise:card-games",
+      "kind": "concept-exercise",
+      "tier": "core",
+      "path": "stages/03-sequences-iteration/exercises/concept/card-games",
+      "mutable": [
+        "lists.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "6ca603621033e79f0e76ebb57c0f071cd8d894ac49a8f32674a25e3f2116e0ff"
+    },
+    {
+      "id": "concept-exercise:chaitanas-colossal-coaster",
+      "kind": "concept-exercise",
+      "tier": "core",
+      "path": "stages/03-sequences-iteration/exercises/concept/chaitanas-colossal-coaster",
+      "mutable": [
+        "list_methods.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "fcdfd793d5ab8c90cb722450800686c598f23b1b9c1de79b657973199deb7039"
+    },
+    {
+      "id": "concept-exercise:making-the-grade",
+      "kind": "concept-exercise",
+      "tier": "core",
+      "path": "stages/03-sequences-iteration/exercises/concept/making-the-grade",
+      "mutable": [
+        "loops.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "1e43a200ebe2146b1bd618469e3e645d8e019e63a88cf12ea9fb8686efbd78b1"
+    },
+    {
+      "id": "concept-exercise:tisbury-treasure-hunt",
+      "kind": "concept-exercise",
+      "tier": "core",
+      "path": "stages/03-sequences-iteration/exercises/concept/tisbury-treasure-hunt",
+      "mutable": [
+        "tuples.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "a6920e04bc61b6aea46aede8843f34f1302f2fe3b2baf8fd967e049d201d2c07"
+    },
+    {
+      "id": "concept-exercise:pretty-leaflet",
+      "kind": "concept-exercise",
+      "tier": "extension",
+      "path": "stages/03-sequences-iteration/exercises/concept/pretty-leaflet",
+      "mutable": [
+        "string_formatting.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "0dd7f9214bef98ea488282ab48df7219e153e281cecdd70890bdaed374ab957f"
+    },
+    {
+      "id": "practice:resistor-color",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/03-sequences-iteration/exercises/practice/resistor-color",
+      "mutable": [
+        "resistor_color.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "3812386d0eeca8346040aa486b55af6979bd40ac4f83a4a3dff024ffdd6d5e1c"
+    },
+    {
+      "id": "practice:difference-of-squares",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/03-sequences-iteration/exercises/practice/difference-of-squares",
+      "mutable": [
+        "difference_of_squares.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "530de8b76310c3cc4cb5f542d510d8395ad020f4887a7174502aac62678673b2"
+    },
+    {
+      "id": "practice:reverse-string",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/03-sequences-iteration/exercises/practice/reverse-string",
+      "mutable": [
+        "reverse_string.py"
+      ],
+      "immutable_files": 27,
+      "sha256": "6120601fb0edb8a678e0b4d12a2d3e25b975a4a99f8195e049a2930aa20825e5"
+    },
+    {
+      "id": "practice:flatten-array",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/03-sequences-iteration/exercises/practice/flatten-array",
+      "mutable": [
+        "flatten_array.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "48c79f1785a372d07a14972df2b726d239349749f0e7487968f9826fdd530f8d"
+    },
+    {
+      "id": "practice:rna-transcription",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/03-sequences-iteration/exercises/practice/rna-transcription",
+      "mutable": [
+        "rna_transcription.py"
+      ],
+      "immutable_files": 17,
+      "sha256": "7439d0126091be9aee5837dc8030d6cae1d3cba207bedb893f541b0ff6242973"
+    },
+    {
+      "id": "practice:anagram",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/03-sequences-iteration/exercises/practice/anagram",
+      "mutable": [
+        "anagram.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "fa3f35c0642d3571e6cc6e2efc70f758e82d18d50c899545ec4b08f71230525c"
+    },
+    {
+      "id": "practice:protein-translation",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/03-sequences-iteration/exercises/practice/protein-translation",
+      "mutable": [
+        "protein_translation.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "481ea0f4ab23af94ba46af1105904cdb8716cfdb3087f8bfd2991370005ae565"
+    },
+    {
+      "id": "practice:series",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/03-sequences-iteration/exercises/practice/series",
+      "mutable": [
+        "series.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "354bb5e79554e4ffd65c8b23e8a6a10354bb962a8f63b1557c79df35007ef5f0"
+    },
+    {
+      "id": "practice:transpose",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/03-sequences-iteration/exercises/practice/transpose",
+      "mutable": [
+        "transpose.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "b84ec5e64b3f0e8aa59fce310a389ea265fc6e8533de46354bc29c2d9b2931bc"
+    },
+    {
+      "id": "practice:resistor-color-duo",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/03-sequences-iteration/exercises/practice/resistor-color-duo",
+      "mutable": [
+        "resistor_color_duo.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "bb7db9d122135e9257382639bf6bb130fc3cf7afa6d0a8c9a4d98cd69307b17d"
+    },
+    {
+      "id": "practice:house",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/03-sequences-iteration/exercises/practice/house",
+      "mutable": [
+        "house.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "b04a1d0d9d1648306aea23acb86d78d2b5f3c28f4b8e427ca114c0ec37715bf6"
+    },
+    {
+      "id": "practice:resistor-color-expert",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/03-sequences-iteration/exercises/practice/resistor-color-expert",
+      "mutable": [
+        "resistor_color_expert.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "a90afc8f75cea406c3b64c62d6e5749372f2c6d827dc5fb2097b65b735c3abc9"
+    },
+    {
+      "id": "practice:resistor-color-trio",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/03-sequences-iteration/exercises/practice/resistor-color-trio",
+      "mutable": [
+        "resistor_color_trio.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "f28625ae685a568454fe8a81fbdf78866a724689c1314a8e424738f32c70283a"
+    },
+    {
+      "id": "practice:secret-handshake",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/03-sequences-iteration/exercises/practice/secret-handshake",
+      "mutable": [
+        "secret_handshake.py"
+      ],
+      "immutable_files": 9,
+      "sha256": "172acc7ac0e1d2a06596015158fc50195501febb17c6a19fc22dbcc516cc46e3"
+    },
+    {
+      "id": "practice:sublist",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/03-sequences-iteration/exercises/practice/sublist",
+      "mutable": [
+        "sublist.py"
+      ],
+      "immutable_files": 17,
+      "sha256": "cea24780af4aeecf56dbc5a90f62e38ecdfd7996196f914dcf4a9d1cebb4897c"
+    },
+    {
+      "id": "practice:eliuds-eggs",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/03-sequences-iteration/exercises/practice/eliuds-eggs",
+      "mutable": [
+        "eliuds_eggs.py"
+      ],
+      "immutable_files": 19,
+      "sha256": "8ef21ee0147c0fa61fc0cc4a6b9260e17d7fdebc664697feb11c7ea4158d4c99"
+    },
+    {
+      "id": "practice:atbash-cipher",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/03-sequences-iteration/exercises/practice/atbash-cipher",
+      "mutable": [
+        "atbash_cipher.py"
+      ],
+      "immutable_files": 12,
+      "sha256": "9d225452065bffa003e2b7aed9849cc663cff6c10092ce4c77153163b53f67e7"
+    },
+    {
+      "id": "practice:diamond",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/03-sequences-iteration/exercises/practice/diamond",
+      "mutable": [
+        "diamond.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "07008720690f16e849509d20a08940475227db0e4464fb489b072366a6d8c7cb"
+    },
+    {
+      "id": "practice:twelve-days",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/03-sequences-iteration/exercises/practice/twelve-days",
+      "mutable": [
+        "twelve_days.py"
+      ],
+      "immutable_files": 8,
+      "sha256": "da6c885ed6a14054b9351dbc9dd4a5fe4d19b0f97807699c8ed692e09f8e3a4e"
+    },
+    {
+      "id": "practice:nth-prime",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/03-sequences-iteration/exercises/practice/nth-prime",
+      "mutable": [
+        "nth_prime.py"
+      ],
+      "immutable_files": 14,
+      "sha256": "b1473f90ccb36859b70d30bc7f4da14a37cc624047b8d713a4dad12831e21097"
+    },
+    {
+      "id": "practice:roman-numerals",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/03-sequences-iteration/exercises/practice/roman-numerals",
+      "mutable": [
+        "roman_numerals.py"
+      ],
+      "immutable_files": 19,
+      "sha256": "afc1fc372ad9c5e23f984d3fd53ecee37f5663d28795e07c5b7225937fb7c68a"
+    },
+    {
+      "id": "practice:beer-song",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/03-sequences-iteration/exercises/practice/beer-song",
+      "mutable": [
+        "beer_song.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "863fc9b029820bd0fc71fd42b7231f34de60da3f3d1ab541657a9f995ebe0480"
+    },
+    {
+      "id": "practice:point-mutations",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/03-sequences-iteration/exercises/practice/point-mutations",
+      "mutable": [
+        "point_mutations.py"
+      ],
+      "immutable_files": 4,
+      "sha256": "69f439d3e0e2176eabcb724cf41078cfc81de22d7e3f61894c316853e39e1536"
+    },
+    {
+      "id": "practice:state-of-tic-tac-toe",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/03-sequences-iteration/exercises/practice/state-of-tic-tac-toe",
+      "mutable": [
+        "state_of_tic_tac_toe.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "62a191e84c9ee00bb9dbd924cfcb265d49ca534ff405bf546c05730838f2e5f6"
+    },
+    {
+      "id": "practice:ocr-numbers",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/03-sequences-iteration/exercises/practice/ocr-numbers",
+      "mutable": [
+        "ocr_numbers.py"
+      ],
+      "immutable_files": 8,
+      "sha256": "93d12aa0213d233690ee379b9873090ca0c53e563976719594b72bb9d9ca3d6f"
+    },
+    {
+      "id": "practice:all-your-base",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/03-sequences-iteration/exercises/practice/all-your-base",
+      "mutable": [
+        "all_your_base.py"
+      ],
+      "immutable_files": 10,
+      "sha256": "a8a8d282a4c3a08f257005a34648b1fa82a96ff78e605e75827c59823f029c48"
+    },
+    {
+      "id": "practice:largest-series-product",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/03-sequences-iteration/exercises/practice/largest-series-product",
+      "mutable": [
+        "largest_series_product.py"
+      ],
+      "immutable_files": 9,
+      "sha256": "f0a4ef61f6a397f22573e42fa1f4cd97a7b06fe092d3e0b23922609215af595b"
+    },
+    {
+      "id": "practice:flower-field",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/03-sequences-iteration/exercises/practice/flower-field",
+      "mutable": [
+        "flower_field.py"
+      ],
+      "immutable_files": 11,
+      "sha256": "a3f9fe17cd679dd1770aeb66d345836ba737d8a694cc00d1f889e01854721a03"
+    },
+    {
+      "id": "practice:variable-length-quantity",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/03-sequences-iteration/exercises/practice/variable-length-quantity",
+      "mutable": [
+        "variable_length_quantity.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "cc247499c58e3fb67a2c0d5eb2ca3e70134e0bb2c7d177225667fa288acf7981"
+    },
+    {
+      "id": "concept:collections",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/04-mappings-sets-comprehensions/concepts/collections",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept:dict-methods",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/04-mappings-sets-comprehensions/concepts/dict-methods",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "c29ca3b99d64be19db1d8e1cd1eb9fc147596d0491de928c103b699be19f5cee"
+    },
+    {
+      "id": "concept:dicts",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/04-mappings-sets-comprehensions/concepts/dicts",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "8a4e31c6a0ce25fae7d66c74809f2d1e57f56a1d3e6e50e077da2c51bf212ce9"
+    },
+    {
+      "id": "concept:list-comprehensions",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/04-mappings-sets-comprehensions/concepts/list-comprehensions",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept:other-comprehensions",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/04-mappings-sets-comprehensions/concepts/other-comprehensions",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept:sets",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/04-mappings-sets-comprehensions/concepts/sets",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "ba063ff4615df64c01faf395bf2e828aad2522f0cbc729598ec4352e2eaab9a7"
+    },
+    {
+      "id": "concept-exercise:cater-waiter",
+      "kind": "concept-exercise",
+      "tier": "core",
+      "path": "stages/04-mappings-sets-comprehensions/exercises/concept/cater-waiter",
+      "mutable": [
+        "sets.py"
+      ],
+      "immutable_files": 10,
+      "sha256": "f862253e5c2bae46b15167cc8cf85de17f45562d1bae702497518204ce401c8f"
+    },
+    {
+      "id": "concept-exercise:inventory-management",
+      "kind": "concept-exercise",
+      "tier": "core",
+      "path": "stages/04-mappings-sets-comprehensions/exercises/concept/inventory-management",
+      "mutable": [
+        "dicts.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "83e47ad61d707b1ca89fead9fb3a5c8b86b5fbe77b197aa7ac059f8fdd55c7e0"
+    },
+    {
+      "id": "concept-exercise:locomotive-engineer",
+      "kind": "concept-exercise",
+      "tier": "core",
+      "path": "stages/04-mappings-sets-comprehensions/exercises/concept/locomotive-engineer",
+      "mutable": [
+        "locomotive_engineer.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "be32cf4d96ee2bd41b8ce1b7d80aad356a6ca1848db86ca639082617c6d2ff45"
+    },
+    {
+      "id": "concept-exercise:mecha-munch-management",
+      "kind": "concept-exercise",
+      "tier": "core",
+      "path": "stages/04-mappings-sets-comprehensions/exercises/concept/mecha-munch-management",
+      "mutable": [
+        "dict_methods.py"
+      ],
+      "immutable_files": 8,
+      "sha256": "993f3ac9a1414bbd18ab2d60bbeef435037966aa18b1fb9186554b9584b998eb"
+    },
+    {
+      "id": "practice:etl",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/04-mappings-sets-comprehensions/exercises/practice/etl",
+      "mutable": [
+        "etl.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "e8f27e61d9f1071bed0a26cdf3e8e81ce25fa70790b39da4094744525e7f5285"
+    },
+    {
+      "id": "practice:sum-of-multiples",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/04-mappings-sets-comprehensions/exercises/practice/sum-of-multiples",
+      "mutable": [
+        "sum_of_multiples.py"
+      ],
+      "immutable_files": 8,
+      "sha256": "d7eb855a177b2ce49c9591b6fa512cd0f98fa6180e514615119a94a6c093f556"
+    },
+    {
+      "id": "practice:space-age",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/04-mappings-sets-comprehensions/exercises/practice/space-age",
+      "mutable": [
+        "space_age.py"
+      ],
+      "immutable_files": 8,
+      "sha256": "5ed7768e47d3ca6ba728b97f7e14a1ffeb0abfc311fe22f54a77d717e551506e"
+    },
+    {
+      "id": "practice:proverb",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/04-mappings-sets-comprehensions/exercises/practice/proverb",
+      "mutable": [
+        "proverb.py"
+      ],
+      "immutable_files": 8,
+      "sha256": "60552b96a079b9242f27242a70b2cf73c1fe3652e1f2214758131cfd5572ca30"
+    },
+    {
+      "id": "practice:word-count",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/04-mappings-sets-comprehensions/exercises/practice/word-count",
+      "mutable": [
+        "word_count.py"
+      ],
+      "immutable_files": 9,
+      "sha256": "491c5f00c55cb29fafdab9ecbc11015e6c07633acbb42b9186189e06170b0a3e"
+    },
+    {
+      "id": "practice:crypto-square",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/04-mappings-sets-comprehensions/exercises/practice/crypto-square",
+      "mutable": [
+        "crypto_square.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "5eaa4a039dc9a3ac630888ec8db3bf0e400806dfbd63628c008162a9e41ae4a3"
+    },
+    {
+      "id": "practice:tournament",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/04-mappings-sets-comprehensions/exercises/practice/tournament",
+      "mutable": [
+        "tournament.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "eb0f384f094a30fc01552595139195b9e369514447e6a0139f5fb0e0fd259d6d"
+    },
+    {
+      "id": "practice:say",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/04-mappings-sets-comprehensions/exercises/practice/say",
+      "mutable": [
+        "say.py"
+      ],
+      "immutable_files": 9,
+      "sha256": "ae7e92dcf9bdd93ebfccbefff71716b72fedd5d5a75a60f1f24196c4503d10b4"
+    },
+    {
+      "id": "practice:bottle-song",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/04-mappings-sets-comprehensions/exercises/practice/bottle-song",
+      "mutable": [
+        "bottle_song.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "27cdda88630accd77c0773fd6e6777cbdc46bafbd2b3332bc9a1d75accaf400e"
+    },
+    {
+      "id": "practice:scale-generator",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/04-mappings-sets-comprehensions/exercises/practice/scale-generator",
+      "mutable": [
+        "scale_generator.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "b7d27c6fdbd298b4d46c59e1a76e53422683215968c1ea2b5dc18ce6088d5d80"
+    },
+    {
+      "id": "practice:food-chain",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/04-mappings-sets-comprehensions/exercises/practice/food-chain",
+      "mutable": [
+        "food_chain.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "5564bb26426c552bddeeaf14d0bd8c85da981ce839e30393ddfdca47fa88d0cc"
+    },
+    {
+      "id": "concept:decorators",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/05-functions-functional-tools/concepts/decorators",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "3b44805affaca2452e4089acd1dc29738b4858a67b26d4201395b6e4acd1185d"
+    },
+    {
+      "id": "concept:function-arguments",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/05-functions-functional-tools/concepts/function-arguments",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "b40364a1e3411a6eb0726353c33aa0a292785ad78729c082a61e364a2a9ec77a"
+    },
+    {
+      "id": "concept:functions",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/05-functions-functional-tools/concepts/functions",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "126141ff5ef71f0044ae1dd7c02cfcfefca44cfa8e73d705135a01c96ca446c0"
+    },
+    {
+      "id": "concept:generator-expressions",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/05-functions-functional-tools/concepts/generator-expressions",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept:higher-order-functions",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/05-functions-functional-tools/concepts/higher-order-functions",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept:anonymous-functions",
+      "kind": "concept",
+      "tier": "extension",
+      "path": "stages/05-functions-functional-tools/concepts/anonymous-functions",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "c7701e162c1b32da6afdce62d127ed6a5b9b815a61b6e8e451cf4ed7200271b8"
+    },
+    {
+      "id": "concept:functional-tools",
+      "kind": "concept",
+      "tier": "extension",
+      "path": "stages/05-functions-functional-tools/concepts/functional-tools",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept:walrus-operator",
+      "kind": "concept",
+      "tier": "extension",
+      "path": "stages/05-functions-functional-tools/concepts/walrus-operator",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept-exercise:restaurant-rozalynn",
+      "kind": "concept-exercise",
+      "tier": "extension",
+      "path": "stages/05-functions-functional-tools/exercises/concept/restaurant-rozalynn",
+      "mutable": [
+        "none.py"
+      ],
+      "immutable_files": 8,
+      "sha256": "ea751d58d5f3066517b5df1b9388b8ef454a6ce5d86a97927fc61c2c1917902c"
+    },
+    {
+      "id": "practice:two-fer",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/05-functions-functional-tools/exercises/practice/two-fer",
+      "mutable": [
+        "two_fer.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "29955f05f6e73b973dcd05ee8799099c0a4cc64ea3f039af4e03894b734396c8"
+    },
+    {
+      "id": "practice:accumulate",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/05-functions-functional-tools/exercises/practice/accumulate",
+      "mutable": [
+        "accumulate.py"
+      ],
+      "immutable_files": 5,
+      "sha256": "8f62d980345546ab8a5755dcb9faac9086e9e25ebeff293133354f7b4fb57cda"
+    },
+    {
+      "id": "practice:strain",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/05-functions-functional-tools/exercises/practice/strain",
+      "mutable": [
+        "strain.py"
+      ],
+      "immutable_files": 5,
+      "sha256": "bb593b2fbc6ba7de0e5899dbe7699fe2e52eddb19d42e358994520afc7059b3f"
+    },
+    {
+      "id": "practice:palindrome-products",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/05-functions-functional-tools/exercises/practice/palindrome-products",
+      "mutable": [
+        "palindrome_products.py"
+      ],
+      "immutable_files": 17,
+      "sha256": "1ed02ca5a4d653f2c49239d789eafd1ea75bd1d6eb38bfb9fc9adf9c6316c647"
+    },
+    {
+      "id": "practice:list-ops",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/05-functions-functional-tools/exercises/practice/list-ops",
+      "mutable": [
+        "list_ops.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "04ff6885af8edef43b601109a9aea31d654a848a85a39b6d7cde270c341311df"
+    },
+    {
+      "id": "concept:raising-and-handling-errors",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/06-errors-resources/concepts/raising-and-handling-errors",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept:user-defined-errors",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/06-errors-resources/concepts/user-defined-errors",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept:with-statement",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/06-errors-resources/concepts/with-statement",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "4e5881f13641bc91da5069ad4b1a34b6b95c2a577679f9de35d1dd52b9b3270a"
+    },
+    {
+      "id": "practice:hamming",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/06-errors-resources/exercises/practice/hamming",
+      "mutable": [
+        "hamming.py"
+      ],
+      "immutable_files": 16,
+      "sha256": "87e6684952e369f24dec90a3c4020093e951ff0783faf837685f9c50fc33cfe9"
+    },
+    {
+      "id": "practice:error-handling",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/06-errors-resources/exercises/practice/error-handling",
+      "mutable": [
+        "error_handling.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "116d80d9bcb7f6bd07fb164a9876b5c66cb010e619a826ba916b1901ef509f64"
+    },
+    {
+      "id": "concept:class-composition",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/07-classes-modeling/concepts/class-composition",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept:class-inheritance",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/07-classes-modeling/concepts/class-inheritance",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "1645e6aabf9d2fe9c199397560fc481b3dcd96391b0d3f729f7af42073fa9407"
+    },
+    {
+      "id": "concept:classes",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/07-classes-modeling/concepts/classes",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "f87dfcc444484a6c6502339bd5454afd21804fc5461541f707e5cb3517b3d18a"
+    },
+    {
+      "id": "concept:dataclasses",
+      "kind": "concept",
+      "tier": "extension",
+      "path": "stages/07-classes-modeling/concepts/dataclasses",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept:enums",
+      "kind": "concept",
+      "tier": "extension",
+      "path": "stages/07-classes-modeling/concepts/enums",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "f608549e0c62ca5e442e73382093b6ed01ce055c13f8c8755c7430af3052630f"
+    },
+    {
+      "id": "concept-exercise:ellens-alien-game",
+      "kind": "concept-exercise",
+      "tier": "core",
+      "path": "stages/07-classes-modeling/exercises/concept/ellens-alien-game",
+      "mutable": [
+        "classes.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "65ed0f5dd69d1fe59b8541844b71c14e2f148e6109fd5bae7abfaa104e7588a6"
+    },
+    {
+      "id": "concept-exercise:plane-tickets",
+      "kind": "concept-exercise",
+      "tier": "core",
+      "path": "stages/07-classes-modeling/exercises/concept/plane-tickets",
+      "mutable": [
+        "generators.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "1d522acf61d8af07687555ea96f90dc658ef97a0cfdf2e76a9d19a079c93f650"
+    },
+    {
+      "id": "concept-exercise:log-levels",
+      "kind": "concept-exercise",
+      "tier": "extension",
+      "path": "stages/07-classes-modeling/exercises/concept/log-levels",
+      "mutable": [
+        "enums.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "3cb31b51e033032fee0f5cd83bf192763ea9a9c696e238fea111a38797e8e9a3"
+    },
+    {
+      "id": "practice:phone-number",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/07-classes-modeling/exercises/practice/phone-number",
+      "mutable": [
+        "phone_number.py"
+      ],
+      "immutable_files": 9,
+      "sha256": "96895b9f5bdade21b13085c68ecc663c6d7302c9d956b9ead9f059452d6a487a"
+    },
+    {
+      "id": "practice:dnd-character",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/07-classes-modeling/exercises/practice/dnd-character",
+      "mutable": [
+        "dnd_character.py"
+      ],
+      "immutable_files": 17,
+      "sha256": "0751fe80d4c99985bf753800b0bdbb88748b82d62beac3ff63a2981d113f40b4"
+    },
+    {
+      "id": "practice:luhn",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/07-classes-modeling/exercises/practice/luhn",
+      "mutable": [
+        "luhn.py"
+      ],
+      "immutable_files": 19,
+      "sha256": "11fb57e1e164415b268148bc4be614d42e64c65dc7ce09c52d9ca78bd3851026"
+    },
+    {
+      "id": "practice:high-scores",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/07-classes-modeling/exercises/practice/high-scores",
+      "mutable": [
+        "high_scores.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "8cb5f2216aa6ccfe303a66cbf98a4869ee2ba38aa3241128fc03c166c428de3e"
+    },
+    {
+      "id": "practice:grade-school",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/07-classes-modeling/exercises/practice/grade-school",
+      "mutable": [
+        "grade_school.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "399e2668fe4c2bae87841f502041a8e05e46614cd3642a4bdf646fa2cc53faff"
+    },
+    {
+      "id": "practice:matrix",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/07-classes-modeling/exercises/practice/matrix",
+      "mutable": [
+        "matrix.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "aabf90be0f48a72a494d3935b139e68488fe00b86c0261c04d9be0538311605b"
+    },
+    {
+      "id": "practice:poker",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/07-classes-modeling/exercises/practice/poker",
+      "mutable": [
+        "poker.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "71c6f28f2059f9319b6eab129d089c24e63140721e362fa6eb3709d3c3791460"
+    },
+    {
+      "id": "practice:yacht",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/07-classes-modeling/exercises/practice/yacht",
+      "mutable": [
+        "yacht.py"
+      ],
+      "immutable_files": 15,
+      "sha256": "272af7d4e3649d8752d897f2fee9f9293f99aea35709cf25016fd5af2bbbe38b"
+    },
+    {
+      "id": "practice:queen-attack",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/07-classes-modeling/exercises/practice/queen-attack",
+      "mutable": [
+        "queen_attack.py"
+      ],
+      "immutable_files": 8,
+      "sha256": "f5b0612075596b816e6d755b65817793fb04134ee719db610ecd08280e5b67fc"
+    },
+    {
+      "id": "practice:allergies",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/07-classes-modeling/exercises/practice/allergies",
+      "mutable": [
+        "allergies.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "1b22f276bc1a05765cf0810f0689b45b05782995c3420b4057bad369b6b4f83f"
+    },
+    {
+      "id": "practice:kindergarten-garden",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/07-classes-modeling/exercises/practice/kindergarten-garden",
+      "mutable": [
+        "kindergarten_garden.py"
+      ],
+      "immutable_files": 9,
+      "sha256": "b9a4d84bb5ab44660ef67f2102ba9a48f3a1e55af515dd0bd10da5689e4f4e93"
+    },
+    {
+      "id": "practice:hangman",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/07-classes-modeling/exercises/practice/hangman",
+      "mutable": [
+        "hangman.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "0b021e57c34936a991a2475c7b442934228364452db7c2eeaf665ca49de829fb"
+    },
+    {
+      "id": "concept:class-customization",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/08-protocols-idioms/concepts/class-customization",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept:context-manager-customization",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/08-protocols-idioms/concepts/context-manager-customization",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept:descriptors",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/08-protocols-idioms/concepts/descriptors",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept:iterators",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/08-protocols-idioms/concepts/iterators",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept:operator-overloading",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/08-protocols-idioms/concepts/operator-overloading",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept:rich-comparisons",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/08-protocols-idioms/concepts/rich-comparisons",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept:aliasing",
+      "kind": "concept",
+      "tier": "extension",
+      "path": "stages/08-protocols-idioms/concepts/aliasing",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "c7701e162c1b32da6afdce62d127ed6a5b9b815a61b6e8e451cf4ed7200271b8"
+    },
+    {
+      "id": "concept:class-interfaces",
+      "kind": "concept",
+      "tier": "extension",
+      "path": "stages/08-protocols-idioms/concepts/class-interfaces",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept:type-hinting",
+      "kind": "concept",
+      "tier": "extension",
+      "path": "stages/08-protocols-idioms/concepts/type-hinting",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "practice:clock",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/08-protocols-idioms/exercises/practice/clock",
+      "mutable": [
+        "clock.py"
+      ],
+      "immutable_files": 8,
+      "sha256": "7b6c08e73b23d4c12162318d60bcea60c13322f1ee91665ca966020dafb67e7c"
+    },
+    {
+      "id": "practice:robot-simulator",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/08-protocols-idioms/exercises/practice/robot-simulator",
+      "mutable": [
+        "robot_simulator.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "bc029fc328a4efe83d1036e2f3177835311aebd18a324df216681c9398417937"
+    },
+    {
+      "id": "practice:complex-numbers",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/08-protocols-idioms/exercises/practice/complex-numbers",
+      "mutable": [
+        "complex_numbers.py"
+      ],
+      "immutable_files": 8,
+      "sha256": "6f3cf516599daf3ebe6636be3f3ab3a046e2047357b3339297f974cbec138a9f"
+    },
+    {
+      "id": "practice:ledger",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/08-protocols-idioms/exercises/practice/ledger",
+      "mutable": [
+        "ledger.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "7cddda37182f80231255e118676eb996e2f3fb5aecf15404afc406b7e17a4475"
+    },
+    {
+      "id": "practice:rational-numbers",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/08-protocols-idioms/exercises/practice/rational-numbers",
+      "mutable": [
+        "rational_numbers.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "bf0d2939608fba5892d289edf96543da5b8d98e46cccb788c56b2b92b42bdda6"
+    },
+    {
+      "id": "practice:custom-set",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/08-protocols-idioms/exercises/practice/custom-set",
+      "mutable": [
+        "custom_set.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "46291181679787f012a30251f876571aa88ff7e9391cad82e019f39f76995733"
+    },
+    {
+      "id": "practice:dot-dsl",
+      "kind": "practice",
+      "tier": "stretch",
+      "path": "stages/08-protocols-idioms/exercises/practice/dot-dsl",
+      "mutable": [
+        "dot_dsl.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "3b677633b695103a9757ec9fdcd92a3517b7428f21d85a73e52bd91056a6782b"
+    },
+    {
+      "id": "concept:functools",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/09-standard-library/concepts/functools",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "3e9ba790bff58533aea577fc83ca451ec54c65fcf84e653d3f0f9fc88be1ce5d"
+    },
+    {
+      "id": "concept:itertools",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/09-standard-library/concepts/itertools",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept:regular-expressions",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/09-standard-library/concepts/regular-expressions",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "concept:complex-numbers",
+      "kind": "concept",
+      "tier": "extension",
+      "path": "stages/09-standard-library/concepts/complex-numbers",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "bf7e6286d5196e87cb7ec55c653285a8d484e997f471303be7dbee2e5aa8e07f"
+    },
+    {
+      "id": "concept:fractions",
+      "kind": "concept",
+      "tier": "extension",
+      "path": "stages/09-standard-library/concepts/fractions",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "3421be0bf67320ce0de10af8012885ce5506f6c7601629e80b6bf358d10193e4"
+    },
+    {
+      "id": "concept:random",
+      "kind": "concept",
+      "tier": "extension",
+      "path": "stages/09-standard-library/concepts/random",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "349b137e700f43808bb6fc136c0d1f27db26e46045afd517d6f58be084f54a9f"
+    },
+    {
+      "id": "concept:secrets",
+      "kind": "concept",
+      "tier": "extension",
+      "path": "stages/09-standard-library/concepts/secrets",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "7bf678d62edcd09ad80cf86b2bf1a0264a342e012b5e06f28e3de9f5d41eb693"
+    },
+    {
+      "id": "concept:unicode-regular-expressions",
+      "kind": "concept",
+      "tier": "extension",
+      "path": "stages/09-standard-library/concepts/unicode-regular-expressions",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "e99294da81cdd39544897a0e3a178aafccde6bac9a2ff368e352c2c91e3d5403"
+    },
+    {
+      "id": "practice:gigasecond",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/09-standard-library/exercises/practice/gigasecond",
+      "mutable": [
+        "gigasecond.py"
+      ],
+      "immutable_files": 9,
+      "sha256": "8678a3ef48d28ba889de82e6c82a0e99dec8c65012315d467da732c0aba2bf1d"
+    },
+    {
+      "id": "practice:acronym",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/09-standard-library/exercises/practice/acronym",
+      "mutable": [
+        "acronym.py"
+      ],
+      "immutable_files": 28,
+      "sha256": "7b33359647da3e1401742c915cf04455ecf10cb5d5ed1ee95b9bd0aa6be4673f"
+    },
+    {
+      "id": "practice:robot-name",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/09-standard-library/exercises/practice/robot-name",
+      "mutable": [
+        "robot_name.py"
+      ],
+      "immutable_files": 10,
+      "sha256": "79381f3d082348eadda7681b57069c9e74c8f4768bd2d38fdf141f361b38263b"
+    },
+    {
+      "id": "practice:simple-cipher",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/09-standard-library/exercises/practice/simple-cipher",
+      "mutable": [
+        "simple_cipher.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "1d082e298c3ef454f82eaf125b43a7e956087e9be9a193b5c4dc9e73cc505040"
+    },
+    {
+      "id": "practice:meetup",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/09-standard-library/exercises/practice/meetup",
+      "mutable": [
+        "meetup.py"
+      ],
+      "immutable_files": 9,
+      "sha256": "b1f2e25c63d0594130ec6138bbd8d2127409e3e6b41809457e9356ae1736c1e0"
+    },
+    {
+      "id": "practice:scrabble-score",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/09-standard-library/exercises/practice/scrabble-score",
+      "mutable": [
+        "scrabble_score.py"
+      ],
+      "immutable_files": 17,
+      "sha256": "443c51dea9f52c802c5a8d637cba794efb2173d5d2c953b1c974afa69a751489"
+    },
+    {
+      "id": "practice:run-length-encoding",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/09-standard-library/exercises/practice/run-length-encoding",
+      "mutable": [
+        "run_length_encoding.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "4e4954bbb41ad802cdeda51027393dc9248b8a637df4a8d4d9162cf551f7f189"
+    },
+    {
+      "id": "practice:diffie-hellman",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/09-standard-library/exercises/practice/diffie-hellman",
+      "mutable": [
+        "diffie_hellman.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "77dad771ee7d3085bd3b694e1cac538c9d2cb78af460c7a6ba67e626ff534943"
+    },
+    {
+      "id": "practice:wordy",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/09-standard-library/exercises/practice/wordy",
+      "mutable": [
+        "wordy.py"
+      ],
+      "immutable_files": 27,
+      "sha256": "c055604da21a50cdebebe81470b6a275f12e138d3d80e5ba2d4cced3b24f7bee"
+    },
+    {
+      "id": "practice:rectangles",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/09-standard-library/exercises/practice/rectangles",
+      "mutable": [
+        "rectangles.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "79d2d4c1644e7a25a6c6a77e483d025e3e3ff5d212c81e0fd9729b76c445126a"
+    },
+    {
+      "id": "practice:markdown",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/09-standard-library/exercises/practice/markdown",
+      "mutable": [
+        "markdown.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "1aa4b37e33cdeb4755b29c7c031ad608d10799314dd8b158b7bd4f4b5ef307c2"
+    },
+    {
+      "id": "practice:grep",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/09-standard-library/exercises/practice/grep",
+      "mutable": [
+        "grep.py"
+      ],
+      "immutable_files": 8,
+      "sha256": "926170c5c4d48ccacfc9cbcf82f73a87973cd33861b030fb14bb772d62bf2ccd"
+    },
+    {
+      "id": "practice:swift-scheduling",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/09-standard-library/exercises/practice/swift-scheduling",
+      "mutable": [
+        "swift_scheduling.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "a9321ff46d2d719c7ffa86cb96e074b2a7aac20c179918d049187d5773f1463c"
+    },
+    {
+      "id": "practice:bank-account",
+      "kind": "practice",
+      "tier": "stretch",
+      "path": "stages/09-standard-library/exercises/practice/bank-account",
+      "mutable": [
+        "bank_account.py"
+      ],
+      "immutable_files": 8,
+      "sha256": "3218bcecc4df45fe29994fe3b54e380b600003c952f0bb7e6f03154d764f2d91"
+    },
+    {
+      "id": "concept:recursion",
+      "kind": "concept",
+      "tier": "core",
+      "path": "stages/10-recursion-dsa/concepts/recursion",
+      "mutable": [],
+      "immutable_files": 4,
+      "sha256": "213ec299a21372ec06d9649a5eac9b79eca24b7709d23efbaf47f91405060834"
+    },
+    {
+      "id": "practice:binary-search",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/10-recursion-dsa/exercises/practice/binary-search",
+      "mutable": [
+        "binary_search.py"
+      ],
+      "immutable_files": 8,
+      "sha256": "9ce4f7c7c978c843a6aae80354c3cde75d2d8e21cd7c39ea54bea2da16c20256"
+    },
+    {
+      "id": "practice:prime-factors",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/10-recursion-dsa/exercises/practice/prime-factors",
+      "mutable": [
+        "prime_factors.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "0de88ec4471e658fc50504ecd420b4e3f0007909d98742b36fbc7d25bf06a5c1"
+    },
+    {
+      "id": "practice:matching-brackets",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/10-recursion-dsa/exercises/practice/matching-brackets",
+      "mutable": [
+        "matching_brackets.py"
+      ],
+      "immutable_files": 18,
+      "sha256": "12642385b987b70beba623f7279e0833c00575ad8051753b85bcda4b2b7b121a"
+    },
+    {
+      "id": "practice:sieve",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/10-recursion-dsa/exercises/practice/sieve",
+      "mutable": [
+        "sieve.py"
+      ],
+      "immutable_files": 24,
+      "sha256": "31c740f09a7b314b5340110219c6883d70fb2aaf2091a618b11796ea5e9df899"
+    },
+    {
+      "id": "practice:tree-building",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/10-recursion-dsa/exercises/practice/tree-building",
+      "mutable": [
+        "tree_building.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "b6b026529f65580d5e4d35c9b7180f0c44c2f8b4ef63b527e06243a03c3af74b"
+    },
+    {
+      "id": "practice:circular-buffer",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/10-recursion-dsa/exercises/practice/circular-buffer",
+      "mutable": [
+        "circular_buffer.py"
+      ],
+      "immutable_files": 13,
+      "sha256": "339e096c5bdfa21ed91f5b45081ea9e5aa90757ff43ff4ec2c9ee578ac7fe4b8"
+    },
+    {
+      "id": "practice:pascals-triangle",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/10-recursion-dsa/exercises/practice/pascals-triangle",
+      "mutable": [
+        "pascals_triangle.py"
+      ],
+      "immutable_files": 10,
+      "sha256": "45c382ab8306c76d34450f27ab66a0c65fffc78403c3cfbfe970625c8496349e"
+    },
+    {
+      "id": "practice:change",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/10-recursion-dsa/exercises/practice/change",
+      "mutable": [
+        "change.py"
+      ],
+      "immutable_files": 8,
+      "sha256": "a3e8bbb27c86f9c1b446a0ba8744ba5982e3669fa0b3244be37cff38a59019ce"
+    },
+    {
+      "id": "practice:knapsack",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/10-recursion-dsa/exercises/practice/knapsack",
+      "mutable": [
+        "knapsack.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "755b2a07c902aca53efdc0833d207f1fbf0cc016f07308f754e0ff06630fba61"
+    },
+    {
+      "id": "practice:binary-search-tree",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/10-recursion-dsa/exercises/practice/binary-search-tree",
+      "mutable": [
+        "binary_search_tree.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "c9dc34d4b2ed67c5c84204b49eee7e636154c8a896ce99648db6dd4850b8779f"
+    },
+    {
+      "id": "practice:square-root",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/10-recursion-dsa/exercises/practice/square-root",
+      "mutable": [
+        "square_root.py"
+      ],
+      "immutable_files": 8,
+      "sha256": "97e90cfcbd1f94b9a0482f3dc48389aa4e4596aa8de10112f2b07ecff1a733e8"
+    },
+    {
+      "id": "practice:game-of-life",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/10-recursion-dsa/exercises/practice/game-of-life",
+      "mutable": [
+        "game_of_life.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "3299998f6999a2ee6f3bc1249ae8fa6972fc2705bf870e04c639cadc4d955e35"
+    },
+    {
+      "id": "practice:saddle-points",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/10-recursion-dsa/exercises/practice/saddle-points",
+      "mutable": [
+        "saddle_points.py"
+      ],
+      "immutable_files": 9,
+      "sha256": "f8dd774fb9580b7cea405c8f9a25531b5da1be0f6acc59a16b65c64207930df2"
+    },
+    {
+      "id": "practice:simple-linked-list",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/10-recursion-dsa/exercises/practice/simple-linked-list",
+      "mutable": [
+        "simple_linked_list.py"
+      ],
+      "immutable_files": 8,
+      "sha256": "1f10f8d683095ceec897e350d5a9a8d870e8e2245ff78d9e1b6f182dd65c9713"
+    },
+    {
+      "id": "practice:pythagorean-triplet",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/10-recursion-dsa/exercises/practice/pythagorean-triplet",
+      "mutable": [
+        "pythagorean_triplet.py"
+      ],
+      "immutable_files": 24,
+      "sha256": "cf98349447cdf9c49042452f7ecfc78b0a7bf400def992f5eab9f53f88e9205c"
+    },
+    {
+      "id": "practice:minesweeper",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/10-recursion-dsa/exercises/practice/minesweeper",
+      "mutable": [
+        "minesweeper.py"
+      ],
+      "immutable_files": 9,
+      "sha256": "e67808643cdb2bf63182dd4a38838e4d57effd29314aa3a04ad86aeb63ca7a0c"
+    },
+    {
+      "id": "practice:killer-sudoku-helper",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/10-recursion-dsa/exercises/practice/killer-sudoku-helper",
+      "mutable": [
+        "killer_sudoku_helper.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "48d976f940d6ffdfdeb93a03a7955f20a6d2cbc1d37041d9ad28d17f1a1dbc6b"
+    },
+    {
+      "id": "practice:linked-list",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/10-recursion-dsa/exercises/practice/linked-list",
+      "mutable": [
+        "linked_list.py"
+      ],
+      "immutable_files": 9,
+      "sha256": "59602b80370c0fb61a57909cfd9e40328ffe3f051637f3367976730f814936c1"
+    },
+    {
+      "id": "practice:rail-fence-cipher",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/10-recursion-dsa/exercises/practice/rail-fence-cipher",
+      "mutable": [
+        "rail_fence_cipher.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "23ccaa1434f8f493fc31a05d84dded7934f0442c12dd3c3d488c201c644c7ce2"
+    },
+    {
+      "id": "practice:go-counting",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/10-recursion-dsa/exercises/practice/go-counting",
+      "mutable": [
+        "go_counting.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "7085d3ffae5e2d1252506ab5e8aeb138b462d8361f3a5193e80501016fafe3ed"
+    },
+    {
+      "id": "practice:spiral-matrix",
+      "kind": "practice",
+      "tier": "reinforcement",
+      "path": "stages/10-recursion-dsa/exercises/practice/spiral-matrix",
+      "mutable": [
+        "spiral_matrix.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "375e33573a9626d7b096f4387abf543335da1cd670734985f61576a47d69897e"
+    },
+    {
+      "id": "practice:relative-distance",
+      "kind": "practice",
+      "tier": "stretch",
+      "path": "stages/10-recursion-dsa/exercises/practice/relative-distance",
+      "mutable": [
+        "relative_distance.py"
+      ],
+      "immutable_files": 9,
+      "sha256": "32f8af90780134d603bc65d3de8e57f68c2bfd0413b1086a8409452614176cc8"
+    },
+    {
+      "id": "practice:affine-cipher",
+      "kind": "practice",
+      "tier": "stretch",
+      "path": "stages/10-recursion-dsa/exercises/practice/affine-cipher",
+      "mutable": [
+        "affine_cipher.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "f8a2bb427161ea44a39f1ffe858ea72f3542d724cfe90531df288975e1c6b002"
+    },
+    {
+      "id": "practice:zipper",
+      "kind": "practice",
+      "tier": "stretch",
+      "path": "stages/10-recursion-dsa/exercises/practice/zipper",
+      "mutable": [
+        "zipper.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "9662d0a0e3919255339816894a9ba0a13618571eeef1046a9afc8788356a6c60"
+    },
+    {
+      "id": "practice:two-bucket",
+      "kind": "practice",
+      "tier": "stretch",
+      "path": "stages/10-recursion-dsa/exercises/practice/two-bucket",
+      "mutable": [
+        "two_bucket.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "66e6fd417da5cecbde8cdd72f8be9a4f6ab430f9d555f8e6b958011534f31c53"
+    },
+    {
+      "id": "practice:word-search",
+      "kind": "practice",
+      "tier": "stretch",
+      "path": "stages/10-recursion-dsa/exercises/practice/word-search",
+      "mutable": [
+        "word_search.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "8b5cbfd9d6398c8c54a8fc641e290a00bc0f24de92603054f0402552da59edb4"
+    },
+    {
+      "id": "practice:dominoes",
+      "kind": "practice",
+      "tier": "stretch",
+      "path": "stages/10-recursion-dsa/exercises/practice/dominoes",
+      "mutable": [
+        "dominoes.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "232e8abde35e12a0b68b6619c386336f578770051ba8787e1d9abe062b3912b5"
+    },
+    {
+      "id": "practice:pov",
+      "kind": "practice",
+      "tier": "stretch",
+      "path": "stages/10-recursion-dsa/exercises/practice/pov",
+      "mutable": [
+        "pov.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "ccfdbbb605512ea2663dc72dd410c0352ed69a307282812ec431e58ae60d0d0b"
+    },
+    {
+      "id": "practice:zebra-puzzle",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/11-capstones/exercises/practice/zebra-puzzle",
+      "mutable": [
+        "zebra_puzzle.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "85036b19fec87ceb123f6d2cbc4acfbcd4ce88ee5abd45512d21ee588ed6cb5c"
+    },
+    {
+      "id": "practice:bowling",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/11-capstones/exercises/practice/bowling",
+      "mutable": [
+        "bowling.py"
+      ],
+      "immutable_files": 8,
+      "sha256": "2b1fe5862f27877854b39f1aca0cadde1e44df4c1ce1d13ac3e44567cb5857d8"
+    },
+    {
+      "id": "practice:forth",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/11-capstones/exercises/practice/forth",
+      "mutable": [
+        "forth.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "6e612b1e113d860f823c46b43c765c3381dcfdc91ec8b4a6436bcc55e7cab1ba"
+    },
+    {
+      "id": "practice:alphametics",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/11-capstones/exercises/practice/alphametics",
+      "mutable": [
+        "alphametics.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "35a721232d66b9d297be0f28ae560aa689fc223c27950f897bf3c7522b149b59"
+    },
+    {
+      "id": "practice:book-store",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/11-capstones/exercises/practice/book-store",
+      "mutable": [
+        "book_store.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "ec9d713e705f92a261899c6c59f8177e7ffbc5a69604182baa3534361ab1a854"
+    },
+    {
+      "id": "practice:paasio",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/11-capstones/exercises/practice/paasio",
+      "mutable": [
+        "paasio.py"
+      ],
+      "immutable_files": 5,
+      "sha256": "7b1d3a148c1745eca72ee2545426efbc390a2d0c01a2bcc5e91d5d3896ab54a1"
+    },
+    {
+      "id": "practice:rest-api",
+      "kind": "practice",
+      "tier": "core",
+      "path": "stages/11-capstones/exercises/practice/rest-api",
+      "mutable": [
+        "rest_api.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "fb80ac55027198582198b6f040c89ea8c8092bde3b6cd33ee14d2cb740b0e64d"
+    },
+    {
+      "id": "practice:connect",
+      "kind": "practice",
+      "tier": "stretch",
+      "path": "stages/11-capstones/exercises/practice/connect",
+      "mutable": [
+        "connect.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "db222d7cf7cf66b9ad76eea61b88453742fcaaaa55f71ad76dfd3839e28d5537"
+    },
+    {
+      "id": "practice:camicia",
+      "kind": "practice",
+      "tier": "stretch",
+      "path": "stages/11-capstones/exercises/practice/camicia",
+      "mutable": [
+        "camicia.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "3836430085934763a686d90803a92c098a42afa477dc291f351949f0e0da2044"
+    },
+    {
+      "id": "practice:react",
+      "kind": "practice",
+      "tier": "stretch",
+      "path": "stages/11-capstones/exercises/practice/react",
+      "mutable": [
+        "react.py"
+      ],
+      "immutable_files": 6,
+      "sha256": "3b06bc606fcd46da9ca1716a3cf72a6bd7bfd415ea9501c454c9a94777312099"
+    },
+    {
+      "id": "practice:satellite",
+      "kind": "practice",
+      "tier": "stretch",
+      "path": "stages/11-capstones/exercises/practice/satellite",
+      "mutable": [
+        "satellite.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "2fa6f84191beb14819c2de656a681b109c95a8f29521b0002405818d9000239b"
+    },
+    {
+      "id": "practice:sgf-parsing",
+      "kind": "practice",
+      "tier": "stretch",
+      "path": "stages/11-capstones/exercises/practice/sgf-parsing",
+      "mutable": [
+        "sgf_parsing.py"
+      ],
+      "immutable_files": 7,
+      "sha256": "b447e5162e68ad7a30c98ebd95eaf706185a87f397dec6a8587044575988590a"
+    }
+  ]
+}
