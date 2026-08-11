@@ -10,6 +10,11 @@ solutions, answer tests, helper package, command wrapper, progress state, or
 runtime. A worksheet may ask the learner to create a local test or temporary
 probe, but that work remains local and uncommitted.
 
+`tests/exercism/` normally supports durable learner-authored tests; tests
+created specifically for these semantic-companion worksheets are temporary
+probes and should not be committed unless independently promoted as a durable
+behavioral claim.
+
 ## Intended outcome
 
 The learner should be able to describe the same code at several levels:

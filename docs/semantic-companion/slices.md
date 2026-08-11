@@ -495,9 +495,18 @@ container ownership, and whether query results may mutate retained state.
 
 ### 5. Add a local behavioral probe
 
-Create a local/uncommitted pytest test that retrieves a grade list, mutates the
-returned list, and then proves a subsequent `grade` or `roster` call is
-unchanged. The probe makes the defensive-copy boundary explicit.
+Create a local/uncommitted pytest test for insertion-order independence:
+construct one school with `Zoe -> grade 2`, `Anna -> grade 1`, and
+`Peter -> grade 2`, construct another school with the same enrollment in a
+different order, and assert that both `roster()` calls return the same list.
+The probe tests canonical ordering without imposing a defensive-copy policy on
+the implementation.
+
+Canonical shape:
+
+```text
+same enrollment + different mutation history -> same normalized roster
+```
 
 Place it under `tests/exercism/grade-school/` and run:
 

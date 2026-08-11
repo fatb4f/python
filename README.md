@@ -65,6 +65,9 @@ order before introducing later orchestration:
 function -> behavioral contract -> CLI adapter -> side effect -> process observation
 ```
 
+After completing selected exercises, use the [Python semantic companion](docs/semantic-companion/README.md)
+for a second pass through semantic decomposition, observation, and pattern recognition.
+
 ## Repository projections
 
 After the manual commands, working-directory behavior, targets, output, and
