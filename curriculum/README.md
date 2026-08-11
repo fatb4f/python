@@ -38,12 +38,12 @@ metadata states otherwise.
 ## Control surface
 
 ```bash
-python tools/path.py verify
-python tools/path.py next
-python tools/path.py show <slug>
-python tools/path.py test <slug>
-python tools/path.py mark <slug>
-python tools/path.py status
+just verify
+just next
+just show <slug>
+just test <slug>
+just mark <slug>
+just status
 ```
 
 Use `--all` with `list`, `next`, or `status` to include reinforcement,

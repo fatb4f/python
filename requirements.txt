@@ -1,2 +1,0 @@
-pytest>=8.4,<9
-pytest-subtests>=0.14,<1

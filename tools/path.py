@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import shlex
 import subprocess
 import sys
 from pathlib import Path
@@ -14,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SEQUENCE_PATH = ROOT / "curriculum" / "sequence.json"
 MANIFEST_PATH = ROOT / "curriculum" / "source-manifest.json"
 DEFAULT_PROGRESS = ROOT / ".learning-progress.json"
+LEARNER_TESTS_ROOT = ROOT / "tests" / "exercism"
 CORE_TIERS = {"core"}
 
 
@@ -191,17 +193,77 @@ def command_status(sequence: dict[str, Any], progress_path: Path, include_all: b
     return 0
 
 
+def is_test_file(path: Path) -> bool:
+    return path.suffix == ".py" and (
+        path.name.startswith("test_") or path.name.endswith("_test.py")
+    )
+
+
+def exercise_items(sequence: dict[str, Any]) -> list[dict[str, Any]]:
+    return [item for item in all_items(sequence) if item["kind"] != "concept"]
+
+
+def learner_test_paths(item: dict[str, Any]) -> list[Path]:
+    directory = LEARNER_TESTS_ROOT / item["slug"]
+    if not directory.is_dir():
+        return []
+    return sorted(path for path in directory.glob("*.py") if is_test_file(path))
+
+
+def exercise_for_path(sequence: dict[str, Any], path: Path) -> dict[str, Any] | None:
+    resolved = path.resolve()
+    for item in exercise_items(sequence):
+        exercise_path = (ROOT / item["path"]).resolve()
+        learner_path = (LEARNER_TESTS_ROOT / item["slug"]).resolve()
+        if resolved.is_relative_to(exercise_path) or resolved.is_relative_to(learner_path):
+            return item
+    return None
+
+
+def resolve_test_path(token: str) -> Path:
+    path = Path(token)
+    resolved = (path if path.is_absolute() else ROOT / path).resolve()
+    if not resolved.is_relative_to(ROOT):
+        raise SystemExit(f"test path is outside the repository: {token}")
+    if not resolved.is_file():
+        raise SystemExit(f"test file does not exist: {token}")
+    if not is_test_file(resolved):
+        raise SystemExit(f"not a pytest test file: {token}")
+    return resolved
+
+
+def run_pytest(cwd: Path, targets: list[str], pytest_args: list[str]) -> int:
+    command = [sys.executable, "-m", "pytest", *targets, *pytest_args]
+    print("$", shlex.join(command), flush=True)
+    return subprocess.call(command, cwd=cwd)
+
+
 def command_test(sequence: dict[str, Any], token: str, pytest_args: list[str]) -> int:
     item = resolve_item(sequence, token)
     if item["kind"] == "concept":
         raise SystemExit("concept documents do not have tests")
     path = ROOT / item["path"]
-    tests = sorted(path.glob("*_test.py"))
+    tests = sorted(path.glob("*_test.py")) + learner_test_paths(item)
     if not tests:
         raise SystemExit(f"no test module found in {path}")
-    command = [sys.executable, "-m", "pytest", *(p.name for p in tests), *pytest_args]
-    print("$", " ".join(command))
-    return subprocess.call(command, cwd=path)
+    return run_pytest(path, [str(test) for test in tests], pytest_args)
+
+
+def command_test_file(sequence: dict[str, Any], token: str, pytest_args: list[str]) -> int:
+    test_path = resolve_test_path(token)
+    item = exercise_for_path(sequence, test_path)
+    cwd = ROOT / item["path"] if item else ROOT
+    return run_pytest(cwd, [str(test_path)], pytest_args)
+
+
+def command_test_node(sequence: dict[str, Any], token: str, pytest_args: list[str]) -> int:
+    path_token, separator, node_suffix = token.partition("::")
+    if not separator or not node_suffix:
+        raise SystemExit("test node must include a file and ::node suffix")
+    test_path = resolve_test_path(path_token)
+    item = exercise_for_path(sequence, test_path)
+    cwd = ROOT / item["path"] if item else ROOT
+    return run_pytest(cwd, [f"{test_path}::{node_suffix}"], pytest_args)
 
 
 def parse_args() -> argparse.Namespace:
@@ -224,6 +286,12 @@ def parse_args() -> argparse.Namespace:
     test = sub.add_parser("test")
     test.add_argument("item")
     test.add_argument("pytest_args", nargs=argparse.REMAINDER)
+    test_file = sub.add_parser("test-file")
+    test_file.add_argument("path")
+    test_file.add_argument("pytest_args", nargs=argparse.REMAINDER)
+    test_node = sub.add_parser("test-node")
+    test_node.add_argument("node")
+    test_node.add_argument("pytest_args", nargs=argparse.REMAINDER)
     return parser.parse_args()
 
 
@@ -244,6 +312,10 @@ def main() -> int:
         return command_status(sequence, args.progress, args.include_all)
     if args.command == "test":
         return command_test(sequence, args.item, args.pytest_args)
+    if args.command == "test-file":
+        return command_test_file(sequence, args.path, args.pytest_args)
+    if args.command == "test-node":
+        return command_test_node(sequence, args.node, args.pytest_args)
     raise AssertionError(args.command)
 
 

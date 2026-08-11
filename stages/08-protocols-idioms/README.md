@@ -44,8 +44,8 @@
 ## Stage commands
 
 ```bash
-python tools/path.py list --stage 08 --all
-python tools/path.py next
-python tools/path.py test <exercise-slug>
-python tools/path.py mark <item-slug>
+just list --stage 08 --all
+just next
+just test <exercise-slug>
+just mark <item-slug>
 ```

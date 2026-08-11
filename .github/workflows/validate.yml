@@ -13,8 +13,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.13"
-      - run: python tools/path.py verify
-      - run: python -m compileall -q tools
+      - uses: astral-sh/setup-uv@v7
+      - uses: extractions/setup-just@v3
+      - run: uv lock --check
+      - run: uv sync --locked
+      - run: >-
+          uv run --frozen --no-sync python -c
+          "import sys; assert sys.implementation.name == 'cpython';
+          assert sys.version_info[:2] == (3, 14)"
+      - run: uv run --frozen --no-sync ruff check tools/path.py
+      - run: uv run --frozen --no-sync ty check tools/path.py
+      - run: >-
+          uv run
+          --directory stages/00-orientation/exercises/practice/hello-world
+          --frozen --no-sync pytest hello_world_test.py --collect-only -q
+      - run: just verify
+      - run: just test hello-world --collect-only -q
+      - run: >-
+          just test-file
+          stages/00-orientation/exercises/practice/hello-world/hello_world_test.py
+          --collect-only -q
+      - run: >-
+          just test-node
+          'stages/00-orientation/exercises/practice/hello-world/hello_world_test.py::HelloWorldTest::test_say_hi'
+          --collect-only -q
+      - run: uv run --frozen --no-sync python -m compileall -q tools

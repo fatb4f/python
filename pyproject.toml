@@ -1,0 +1,22 @@
+[project]
+name = "progressive-python-curriculum"
+version = "0.1.0"
+description = "A thin Python and pytest learning environment built from the Exercism Python track"
+requires-python = ">=3.14,<3.15"
+
+[dependency-groups]
+dev = [
+  "pytest>=8.4,<9",
+  "pytest-subtests>=0.14,<1",
+  "ruff>=0.16,<0.17",
+  "ty>=0.0.69,<0.0.70",
+]
+
+[tool.pytest.ini_options]
+addopts = ["-ra"]
+markers = [
+  "task(taskno): Exercism concept-exercise task number",
+]
+
+[tool.uv]
+package = false
