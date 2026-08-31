@@ -3,27 +3,33 @@
 ## Status
 
 **Role:** optional semantic-companion realization profile  
-**Scope:** native Xonsh fluency, Python data-shape recognition, and small terminal algorithms  
+**Scope:** native Xonsh fluency, Python data-shape recognition, small terminal algorithms, and constraint-driven task decomposition  
 **Authority:** `reference.md` remains the semantic pattern atlas; this profile supplies a concrete terminal evaluation domain
 
-This document does not define a parallel DSA curriculum and does not make Xonsh an architectural dependency of the repository.
+This document does not define a parallel DSA curriculum and does not make Xonsh or any terminal tool an architectural dependency of the repository.
 
 Its purpose is narrower:
 
-> Use ordinary terminal work to repeatedly derive Python types, structures, and algorithms from required properties and required operations.
+> Use ordinary terminal work to repeatedly derive Python types, structures, algorithms, and realizations from a stated task, required result, and explicit constraints.
 
 The intended learning inversion is:
 
 ```text
 not
 
-known container / API
+known command / container / API
         ↓
 search for somewhere to use it
 
 but
 
 intent
+  ↓
+identify subject
+  ↓
+establish context
+  ↓
+specify result
   ↓
 constraints analysis
   ↓
@@ -35,13 +41,13 @@ representation choice
   ↓
 algorithm choice
   ↓
-effect boundary
+realization choice
   ↓
 execution
   ↓
 observation
   ↓
-evaluation
+validate result
 ```
 
 The terminal is useful because it continuously presents small concrete problems involving files, processes, structured output, environment state, and collections. Xonsh lets those problems cross directly into Python objects without requiring a separate scripting phase.
@@ -100,7 +106,136 @@ Do not duplicate atlas entries here. When a T0 exercise uses selection, coverage
 
 ---
 
-# 2. Tier 0 contract
+# 2. Compact task model
+
+A useful terminal task can be stated as:
+
+```text
+TASK := OP(WHAT | CONTEXT) -> RESULT
+```
+
+where:
+
+```text
+WHAT
+    the subject being observed or acted on
+
+CONTEXT
+    scope and constraints already known
+
+OP
+    the semantic operation required
+
+RESULT
+    the postcondition that defines success
+```
+
+This notation is intentionally more abstract than a terminal command.
+
+For example:
+
+```text
+TASK:
+    rank Python files in a repository by size
+
+WHAT:
+    filesystem files
+
+CONTEXT:
+    repository subtree
+    Python suffix
+    regular files only
+
+RESULT:
+    files ordered descending by size
+
+required properties:
+    preserve file identity
+    size must be observable
+    ordering matters
+
+required operations:
+    enumerate
+    select
+    project size
+    rank
+
+representation:
+    iterable[Path]
+        -> sequence[(Path, int)]
+
+algorithm:
+    selection + keyed sorting
+
+realization:
+    Xonsh / Python / suitable subprocess tool
+```
+
+The important boundary is:
+
+```text
+semantic task
+    !=
+terminal realization
+```
+
+A command, Python expression, Xonsh expression, or external utility is one possible realization of the task. Tool choice should be derived only after the task semantics are sufficiently explicit.
+
+---
+
+# 3. Precision ladder
+
+Constraint analysis should become more precise only as required.
+
+Use this three-level ladder:
+
+```text
+exploratory
+    discover shape or state
+    weakly constrained
+        ↓
+targeted
+    reduce candidates
+    enough structure to narrow the problem
+        ↓
+surgical
+    exact identity or structural predicate
+    strongly constrained operation
+```
+
+Examples:
+
+```text
+What Python files exist?
+    -> exploratory
+
+Which Python files are tests?
+    -> targeted
+
+Which test modules exceed a size threshold?
+    -> surgical
+```
+
+The control question is:
+
+```text
+Do I know the subject sufficiently?
+│
+├─ no
+│   -> explore and observe shape
+│
+├─ partly
+│   -> add only enough constraints to narrow candidates
+│
+└─ yes
+    -> perform the exact operation
+```
+
+This prevents premature construction of elaborate patterns or pipelines when the required information has not yet been established.
+
+---
+
+# 4. Tier 0 contract
 
 T0 means **native Xonsh fluency**, not Bash compatibility followed by later Python adoption.
 
@@ -167,7 +302,7 @@ Rich, Jedi, Coconut, custom macros, events, and project-specific shell machinery
 
 ---
 
-# 3. Constraint analysis comes first
+# 5. Constraint analysis comes first
 
 Every T0 task should begin by identifying the properties that must be preserved or established.
 
@@ -211,14 +346,16 @@ Only after these are explicit should the learner select a representation.
 The core derivation is:
 
 ```text
+WHAT + CONTEXT + RESULT
+          ↓
 constraints
-   ↓
-required properties
-   ↓
+          ↓
+required properties / invariants
+          ↓
 required operations
-   ↓
+          ↓
 type / structure
-   ↓
+          ↓
 algorithm
 ```
 
@@ -244,7 +381,7 @@ The representation is therefore a consequence of the contract rather than the st
 
 ---
 
-# 4. Decision-tree modeling
+# 6. Decision-tree modeling
 
 The constraint workflow naturally introduces decision-tree data modeling.
 
@@ -254,16 +391,16 @@ A representation decision can be expressed as a series of predicates that progre
 Does order carry meaning?
 ├─ yes
 │  ├─ random access required?
-│  │  ├─ yes → sequence / list
-│  │  └─ no  → iterable / iterator may suffice
+│  │  ├─ yes -> sequence / list
+│  │  └─ no  -> iterable / iterator may suffice
 │  └─ duplicates meaningful?
-│     ├─ yes → preserve sequence
-│     └─ no  → explicit deduplication may be admissible
+│     ├─ yes -> preserve sequence
+│     └─ no  -> explicit deduplication may be admissible
 └─ no
    ├─ keyed retrieval required?
-   │  └─ yes → mapping
+   │  └─ yes -> mapping
    └─ unique membership required?
-      └─ yes → set
+      └─ yes -> set
 ```
 
 The tree can continue from the selected structure into API and failure semantics:
@@ -273,18 +410,18 @@ mapping required
    ↓
 missing-key semantics?
 ├─ absence is an error
-│    → mapping[key]
+│    -> mapping[key]
 ├─ absence is a normal query result
-│    → mapping.get(...)
+│    -> mapping.get(...)
 └─ absence should construct mutable state
-     → defaultdict(...)
+     -> defaultdict(...)
 ```
 
-This is useful because it introduces, with immediately observable consequences:
+This introduces, with immediately observable consequences:
 
 ```text
 classification
-feature / property extraction
+property extraction
 branch predicates
 state-space reduction
 terminal choices
@@ -295,7 +432,49 @@ The decision tree is itself data and may later be represented explicitly, but T0
 
 ---
 
-# 5. Atlas projection into terminal work
+# 7. Minimal pipeline roles
+
+Small terminal workflows can be decomposed into four composition roles:
+
+```text
+SOURCE
+    produces values
+        ↓
+FILTER
+    preserves selected values
+        ↓
+TRANSFORM
+    changes representation or value
+        ↓
+SINK
+    consumes values or performs an effect
+```
+
+These are semantic roles rather than tool categories.
+
+For example:
+
+```text
+glob paths
+    SOURCE
+      ↓
+select files above threshold
+    FILTER
+      ↓
+project size and rank
+    TRANSFORM
+      ↓
+print / write / invoke command
+    SINK
+```
+
+The same external command may play different roles in different workflows, and Python expressions may realize any non-effectful role. Do not infer a role from a tool name alone.
+
+This vocabulary is intentionally smaller than a full ETL or workflow model. It exists only to make composition visible at T0.
+
+---
+
+# 8. Atlas projection into terminal work
 
 The seeded semantic patterns map directly onto ordinary terminal problems.
 
@@ -313,7 +492,7 @@ The seeded semantic patterns map directly onto ordinary terminal problems.
 | Selection | preserve values satisfying a predicate |
 | Coverage | compare required and observed sets |
 | Frequency counting | histogram terminal observations |
-| Grouped index | build key → values access structures |
+| Grouped index | build key -> values access structures |
 | Tokenization / normalization | turn text output into canonical values |
 | Lazy iteration | avoid unnecessary materialization |
 
@@ -355,7 +534,7 @@ Operation:
 
 ---
 
-# 6. Filesystem objects as a primary T0 domain
+# 9. Filesystem objects as a primary T0 domain
 
 Treat filesystem entities as objects rather than arbitrary filename strings whenever the boundary allows it.
 
@@ -392,9 +571,30 @@ predicate aggregation
 
 with a concrete object model.
 
+The subject-first rule is useful here:
+
+```text
+subject
+    filesystem path
+
+required operations
+    compose paths
+    inspect suffix
+    query existence
+    read content
+
+required properties
+    preserve filesystem identity and path semantics
+
+representation
+    Path
+```
+
+The representation follows from the required properties and operations.
+
 ---
 
-# 7. Process boundary as an effect boundary
+# 10. Process boundary as an effect boundary
 
 Subprocess execution should be recognized as an external effect rather than as an undifferentiated text pipeline.
 
@@ -444,7 +644,7 @@ useful Python object
 
 ---
 
-# 8. Minimal complexity intuition
+# 11. Minimal complexity intuition
 
 Complexity belongs in T0 only where it changes an interactive design choice.
 
@@ -471,40 +671,42 @@ The operational question is more important than notation:
 
 ```text
 repeatedly scanning the same values?
-    → consider constructing a set or mapping once
+    -> consider constructing a set or mapping once
 
 need order or multiplicity?
-    → preserve a sequence
+    -> preserve a sequence
 
 need only one pass?
-    → avoid unnecessary materialization
+    -> avoid unnecessary materialization
 
 crossing a subprocess boundary repeatedly?
-    → consider collecting/filtering locally before invoking another effect
+    -> consider collecting/filtering locally before invoking another effect
 ```
 
 Complexity should remain tied to a required property or observable cost, not memorized as trivia.
 
 ---
 
-# 9. T0 control loop
+# 12. T0 control loop
 
 A small terminal task should follow this sequence:
 
 ```text
 1. State intent.
-2. Enumerate constraints.
-3. Identify required invariants / properties.
-4. Identify required operations.
-5. Select the smallest admissible representation.
-6. Select the corresponding algorithmic idiom from the atlas.
-7. Identify the external effect boundary, if any.
-8. Execute the operation.
-9. Observe the resulting value, status, or failure.
-10. Evaluate whether the original constraints were satisfied.
+2. Identify WHAT: the subject being acted on.
+3. Establish CONTEXT: scope and known constraints.
+4. Declare RESULT: the postcondition that defines success.
+5. Choose the minimum useful precision: exploratory, targeted, or surgical.
+6. Identify required invariants / properties.
+7. Identify required operations.
+8. Select the smallest admissible representation.
+9. Select the corresponding algorithmic idiom from the atlas.
+10. Compose source / filter / transform / sink roles where needed.
+11. Choose a realization only now.
+12. Execute and preserve external effect boundaries.
+13. Observe the resulting value, status, or failure.
+14. Validate the RESULT against the original constraints.
 ```
-
-This makes proper workflow sequencing part of terminal fluency.
 
 The anti-pattern is:
 
@@ -517,37 +719,49 @@ force the problem into it
 The preferred sequence is:
 
 ```text
+what am I acting on?
+        ↓
+what result defines success?
+        ↓
 what must remain true?
         ↓
 what operations must be supported?
         ↓
 what representation preserves those properties?
         ↓
-what is the smallest procedure that establishes the result?
+what algorithm establishes the result?
+        ↓
+which realization is appropriate here?
 ```
+
+This makes proper workflow sequencing part of terminal fluency.
 
 ---
 
-# 10. Completion contract
+# 13. Completion contract
 
 T0 succeeds when the learner can routinely perform this derivation:
 
 ```text
-external or local value
-      ↓
+TASK := OP(WHAT | CONTEXT) -> RESULT
+                ↓
 constraints analysis
-      ↓
+                ↓
 required properties
-      ↓
+                ↓
 required operations
-      ↓
+                ↓
 representation
-      ↓
+                ↓
 algorithm
-      ↓
+                ↓
+realization
+                ↓
 execution
-      ↓
+                ↓
 observation
+                ↓
+RESULT validation
 ```
 
 Concretely, the learner should be comfortable with:
@@ -560,6 +774,8 @@ Concretely, the learner should be comfortable with:
 ✓ aliases, navigation, history, and jobs
 ✓ Path and glob objects
 
+✓ distinguishing subject, context, operation, and result
+✓ increasing constraint precision only when needed
 ✓ recognizing when order, multiplicity, uniqueness, or keyed identity matters
 ✓ choosing sequence, iterator, set, mapping, or Path from those constraints
 ✓ iteration and structural unpacking
@@ -572,21 +788,24 @@ Concretely, the learner should be comfortable with:
 ✓ grouped indexing
 ✓ lazy consumption when materialization is unnecessary
 
+✓ recognizing source / filter / transform / sink roles
 ✓ preserving process / filesystem failure boundaries
+✓ selecting tools as realizations rather than semantic authorities
 ✓ observing the resulting Python object rather than reverting immediately to text processing
+✓ validating the result against the original task contract
 ```
 
 No Rich, Jedi, Coconut, custom macros, event hooks, or domain-specific shell framework is necessary to satisfy this contract.
 
 ---
 
-# 11. Adoption ladder
+# 14. Adoption ladder
 
 The resulting progression is:
 
 ```text
 T0 — native Xonsh + data-shape fluency
-    constraints → representation → algorithm
+    task → constraints → representation → algorithm → realization
 
 T1 — Python observation
     Rich, traceback, inspect, pydoc, pytest
@@ -610,7 +829,7 @@ T3 does not introduce object transformation. T0 already establishes that semanti
 
 ---
 
-# 12. Relationship to later workflow reasoning
+# 15. Relationship to later workflow reasoning
 
 The T0 sequence deliberately mirrors larger software-design reasoning without introducing those abstractions prematurely.
 
@@ -619,15 +838,19 @@ Small-scale terminal reasoning:
 ```text
 intent
   ↓
+WHAT + CONTEXT + RESULT
+  ↓
 constraints
   ↓
-properties
+properties / invariants
   ↓
 operations
   ↓
 representation
   ↓
 algorithm
+  ↓
+realization
   ↓
 execution
   ↓
@@ -656,8 +879,12 @@ execution
 observation
 ```
 
-The connection should remain conceptual during T0. The terminal profile is not intended to smuggle PPF architecture, workflow engines, generic adapters, or domain frameworks into the semantic companion.
+The connection should remain conceptual during T0. The terminal profile is not intended to smuggle a fixed terminal ontology, tool matrix, PPF architecture, workflow engine, generic adapter framework, or domain model into the semantic companion.
 
-The durable habit is simply:
+The durable habits are:
 
-> Analyze constraints before selecting representation, and select representation before selecting procedure.
+> Identify the subject and required result before choosing the representation.
+>
+> Analyze constraints before selecting procedure.
+>
+> Treat tools as realizations of semantic operations, not as the semantic model itself.
