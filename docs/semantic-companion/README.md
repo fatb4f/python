@@ -59,6 +59,31 @@ set relation
 See [slices.md](slices.md) for the worksheets and [reference.md](reference.md)
 for the seeded atlas.
 
+### Optional terminal projection
+
+[Xonsh T0](xonsh-t0.md) projects the same semantic vocabulary into ordinary
+terminal work. It does not add another curriculum or semantic authority.
+Instead, filesystem objects, subprocess results, structured output, and shell
+state provide a concrete domain for repeatedly deriving types, structures, and
+algorithms from constraints, required properties, and required operations.
+
+Its core sequence is:
+
+```text
+intent
+  -> constraints analysis
+  -> required properties
+  -> required operations
+  -> representation
+  -> algorithm
+  -> execution
+  -> observation
+```
+
+Use it as an optional realization profile when terminal immersion is useful;
+continue to use `reference.md` for the meanings and boundaries of the seeded
+patterns.
+
 ## Worksheet control loop
 
 Every slice follows the same ten steps.
