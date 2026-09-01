@@ -84,6 +84,24 @@ Use it as an optional realization profile when terminal immersion is useful;
 continue to use `reference.md` for the meanings and boundaries of the seeded
 patterns.
 
+The broader [Xonsh adoption profile](xonsh-adoption.md) defines the staged
+progression from native Xonsh fluency through Rich-based runtime observation,
+Jedi and WezTerm interaction, Coconut functional orchestration, Xonsh macros
+and callable aliases, and finally domain-specific terminal projections. It
+also records the manual-first derivation path for a future stdlib explorer.
+
+### PPF semantic source extract
+
+[PPF normalized semantic extract](ppf-normalized.md) consolidates the source
+semantics from `fatb4f/ppf` `docs/theory/drafts/01.md` and `02.md`. It keeps the
+source distinction between domain meaning, variability, operations, HOFs,
+factories, adapters, orchestration, state, and effects while removing repeated
+presentations across the two drafts.
+
+The extract is a reference source only. PPF integration remains deferred; its
+vocabulary can be used to recognize semantic shapes without making PPF a
+runtime, dependency, or curriculum authority.
+
 ## Worksheet control loop
 
 Every slice follows the same ten steps.
