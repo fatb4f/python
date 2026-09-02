@@ -62,14 +62,15 @@ T0 CROSS
   -> T5 ENGINEER
 ```
 
-Start with [semantic practice](docs/semantics/README.md), then use the
-[Xonsh progression](docs/xonsh/README.md) as a concrete environment in which to
-apply it. The [stdlib exploration guide](docs/python/stdlib-exploration.md)
-connects runtime inspection to later project work.
+Start with the [Ops learning guide](docs/ops/README.md). It owns progression
+through concrete terminal operations while composing
+[semantic practice](docs/semantics/README.md), the
+[Xonsh capability progression](docs/xonsh/README.md), and
+[stdlib exploration](docs/python/stdlib-exploration.md) as supporting models.
 
 ## Repository shape
 
-- `docs/` owns the learning contract and capability progression.
+- `docs/` owns the learning contract, Ops progression, and capability references.
 - `specimens/` contains small semantic specimens with explicit contracts.
 - `tests/` contains their behavioral claims and environment checks.
 - `projects/` and `experiments/` appear only when real work earns those

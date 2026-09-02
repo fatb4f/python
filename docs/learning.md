@@ -70,6 +70,16 @@ REAL COMPUTATION
 The standard library spans the last two layers. At T1 it is an object and API
 exploration substrate. At T4 its modules become components of real tools.
 
+## Operational spine
+
+The [Ops learning guide](ops/README.md) owns progression through concrete
+terminal work. It begins from a task, applies semantic deconstruction
+horizontally, and adopts Xonsh/Python capabilities vertically only when the
+operation requires them.
+
+The semantic and capability documents remain reference models. The Ops guide
+determines what to practice next.
+
 ## Capability tiers
 
 | Tier | Contract |
@@ -116,6 +126,8 @@ progress counter. For a task or specimen, be able to state:
 - what runtime or test evidence supports the claim;
 - what observation would cause the model to be revised.
 
-Continue with [semantic practice](semantics/README.md), the
-[Xonsh capability progression](xonsh/README.md), or
-[standard-library exploration](python/stdlib-exploration.md).
+Start with the [Ops learning guide](ops/README.md). Use
+[semantic practice](semantics/README.md), the
+[Xonsh capability progression](xonsh/README.md), and
+[standard-library exploration](python/stdlib-exploration.md) as the supporting
+models it composes.

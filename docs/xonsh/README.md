@@ -4,6 +4,10 @@ Xonsh is the vertical capability axis for applying the repository's
 [semantic practice](../semantics/README.md) to ordinary terminal work. It is a
 Python-aware process environment, not semantic authority.
 
+The [Ops learning guide](../ops/README.md) owns the order of concrete practice.
+These documents explain the capability available when an operation reaches a
+given tier.
+
 ```text
 T0 CROSS
   -> T1 OBSERVE
