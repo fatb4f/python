@@ -132,7 +132,7 @@ Compose values and processes with native Python and Xonsh facilities:
 - Python expressions and ordinary pipelines;
 - paths, environment values, and captured results;
 - aliases and structured-output conversion;
-- source, filter, transform, and sink roles.
+- explicit composition without hiding representation or effect boundaries.
 
 ### T2+ — Functionalize
 
@@ -277,9 +277,9 @@ The semantic core owns:
 - the exploratory → targeted → surgical precision ladder;
 - semantic, representation, operational, resource, boundary, and failure
   constraints;
-- representation-selection decision trees;
+- constraint-driven reduction from candidate representations `R₀` through
+  successively smaller sets to an admissible set `R*`;
 - property and invariant derivation;
-- source, filter, transform, and sink composition roles;
 - complexity only where it changes a design choice;
 - validation against the original result contract.
 
@@ -313,7 +313,9 @@ Responsibilities:
 - `semantics/README.md` introduces the horizontal semantic axis and its status.
 - `semantics/ppf.md` contains the normalized active learning model.
 - `semantics/task-deconstruction.md` owns constraint-driven task reduction.
-- `semantics/patterns.md` derives reusable patterns from the semantic primitives.
+- `semantics/patterns.md` derives reusable patterns from primitive conditions
+  and decision pressure. It owns source/filter/transform/sink as one
+  composition pattern and must not become a conventional pattern glossary.
 - `xonsh/t0-cross.md` through `xonsh/t3-extend.md` own the vertical capability
   progression.
 - `xonsh/progression.md` defines T4 project adoption and T5 engineering gates.
@@ -369,13 +371,16 @@ The specimen contracts are:
 - **Token frequency:** Unicode alphanumeric tokens, `casefold()` normalization,
   one internal apostrophe, punctuation and underscore boundaries, and
   `Counter` output.
-- **Run length:** non-digit source symbols, omitted singleton counts,
-  multi-digit counts, explicit malformed-input rejection, and round-trip
-  behavior.
+- **Run length:** a digit-free source grammar, a distinct encoded grammar in
+  which digits are count syntax, omitted singleton counts, multi-digit counts,
+  explicit malformed-input rejection, and the invariant
+  `decode(encode(value)) == value` for every admissible source string.
 
 Rewrite their tests as native pytest. Do not preserve the original
 `unittest.TestCase` suites, exercise metadata, learner stubs, or hidden-answer
-structure.
+structure. Give every specimen a short semantic header describing its
+contract, constraints, representation choice, and dominant PPF primitives;
+the specimens are not canonical Python implementations.
 
 Do not retain Strain or Grade School. Strain contributes little beyond
 comprehension syntax, while Grade School carries disproportionate state and API
@@ -397,7 +402,10 @@ Then delete:
 - CPython diagnostic/intelligence plans, including all untracked handoff drafts;
 - `docs/feedback-system.md` and `docs/llm/extra.md`;
 - the empty CPython specimen placeholder;
-- `.helix/languages.toml` and `NOTICE.md`.
+- `.helix/languages.toml`, because the user chose to remove the obsolete
+  repository-wide LSP and formatting override;
+- `NOTICE.md`, after confirming that it contains only the obsolete fork
+  narrative and no independent license terms required by retained material.
 
 Keep the inherited MIT `LICENSE` unchanged. Git history remains the archive.
 
@@ -410,9 +418,16 @@ Rename the project metadata to `python-immersion`. Keep Python 3.14,
 `rich>=15.0.0` as the runtime dependency, and `pytest>=8.4,<9` as the sole
 development dependency.
 
-Remove pytest-subtests, Ruff, ty, and the Exercism task marker. Regenerate
-`uv.lock`. Xonsh and Coconut remain external runtimes rather than root project
-dependencies.
+Remove pytest-subtests and the Exercism task marker. Minimize the current root
+environment by removing Ruff and ty because no active validation contract uses
+them; this is not an architectural rejection. Reintroduce either tool when
+executable project code establishes a concrete repository-wide role.
+Regenerate `uv.lock`. Xonsh and Coconut remain external runtimes rather than
+root project dependencies.
+
+Keep T0–T3 Xonsh documentation descriptive and manual initially. When repeated
+executable examples emerge, extract minimal smoke specimens before considering
+Xonsh as a test dependency.
 
 The replacement CI workflow validates:
 
@@ -457,4 +472,3 @@ The replacement CI workflow validates:
   Rich import, and `git diff --check` pass;
 - `experiments/` and `projects/` remain absent until a real artifact earns
   either surface.
-
