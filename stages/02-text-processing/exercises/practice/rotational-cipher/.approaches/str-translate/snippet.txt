@@ -1,5 +1,0 @@
-ALPHABET = "abcdefghijklmnopqrstuvwxyz"
-
-def rotate(text, key):
-    translator = ALPHABET[key:] + ALPHABET[:key]
-    return text.translate(str.maketrans(ALPHABET + ALPHABET.upper(), translator + translator.upper()))

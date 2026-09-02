@@ -1,5 +1,0 @@
-def reverse(text):
-    output = ""
-    for codepoint in text:
-        output = codepoint + output
-    return output

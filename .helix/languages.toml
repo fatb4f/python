@@ -1,5 +1,0 @@
-# Keep static observers explicit during the manual learning phase.
-[[language]]
-name = "python"
-language-servers = []
-auto-format = false

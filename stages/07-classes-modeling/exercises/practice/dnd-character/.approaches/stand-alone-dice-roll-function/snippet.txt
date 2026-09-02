@@ -1,8 +1,0 @@
-class Character:
-    ...
-    def ability(self):
-        return choice([*vars(self).values()])
-
-def dice_roll():
-    values = sample(range(1, 7), 4)
-    return sum(sorted(values)[1:])
