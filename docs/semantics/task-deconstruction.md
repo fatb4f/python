@@ -149,6 +149,106 @@ PPF supplies the questions that drive reduction:
 | STATE | Ownership, lifecycle, mutation, and storage form |
 | COMPOSITION | Interaction and ordering structure |
 
+## Semantic refinement and feedback
+
+The task model can be understood as lightweight lattice plumbing over a
+partially known world.
+
+```text
+Wₙ
+    current modeled world
+
+G
+    desired RESULT / postcondition
+
+C(Wₙ)
+    constraints induced by the current world
+
+A(Wₙ)
+    actions or realizations admissible under those constraints
+
+J(a, Wₙ)
+    policy or observable cost used only among admissible choices
+```
+
+The model supplies assumptions about the world. Constraint analysis determines
+what remains admissible. Execution and observation test those assumptions and
+provide evidence for assertions.
+
+```text
+model / assumptions
+        ↓
+constraints / predicates
+        ↓
+admissible realizations
+        ↓
+policy selects among valid choices
+        ↓
+execution
+        ↓
+observation
+        ↓
+validation
+        ↓
+assert / reject / revise
+```
+
+An assumption is not an assertion. Assertions require observed evidence that
+satisfies the relevant predicate or postcondition.
+
+The admissible set is:
+
+```text
+A(Wₙ) = {a | constraints(Wₙ, a) hold}
+```
+
+Selection is conceptually:
+
+```text
+aₙ = simplest or lowest-cost adequate a
+     subject to a ∈ A(Wₙ)
+```
+
+Execution yields an observation that may refine the modeled world:
+
+```text
+aₙ
+ ↓
+external system
+ ↓
+observation oₙ
+ ↓
+validate / admit
+ ↓
+Wₙ₊₁
+```
+
+The useful information-order invariant is:
+
+```text
+Wₙ ⊑ Wₙ₊₁
+```
+
+where an admitted successor contains at least the established information of
+its predecessor. Contradictory evidence must remain observable rather than
+silently rewriting an established fact.
+
+There are two complementary views of refinement:
+
+```text
+constraints shrink the feasible world
+
+S₀ ⊒ S₁ ⊒ S₂ ⊒ ... ⊒ S*
+
+while evidence grows the known world
+
+W₀ ⊑ W₁ ⊑ W₂ ⊑ ... ⊑ W*
+```
+
+This is enough lattice structure for ordinary task reasoning: information
+order, refinement, admission/join, and contradiction. A reusable formal
+mechanism is only warranted when repeated use requires one.
+
 ## Representation decisions
 
 A representation decision is a series of predicates, not a memorized lookup
@@ -211,10 +311,10 @@ Do not use complexity notation as detached trivia.
 
 1. State intent.
 2. Identify WHAT.
-3. Establish CONTEXT.
-4. Declare the RESULT postcondition.
+3. Establish CONTEXT and the current modeled world `Wₙ`.
+4. Declare the RESULT postcondition `G`.
 5. Choose exploratory, targeted, or surgical precision.
-6. Identify constraints and invariants.
+6. Identify assumptions, constraints, and invariants.
 7. Derive the required operations.
 8. Reduce candidate representations to an admissible set.
 9. Reduce candidate algorithms and realizations.
@@ -222,8 +322,11 @@ Do not use complexity notation as detached trivia.
     alternatives.
 11. Execute while preserving boundary and failure evidence.
 12. Observe the result.
-13. Validate it against the original contract.
-14. Revise the semantic model when evidence contradicts it.
+13. Validate the observation against the original predicates and postcondition.
+14. Admit supported assertions into `Wₙ₊₁`; keep contradictions observable.
+15. Revise assumptions or the semantic model when evidence contradicts them.
+16. Repeat until the RESULT postcondition holds or no admissible realization
+    remains.
 
 The anti-pattern is selecting a command, library, type, or pattern first and
 forcing the problem into it.
