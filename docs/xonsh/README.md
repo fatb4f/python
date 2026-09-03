@@ -20,6 +20,7 @@ T0 CROSS
 
 ## Documents
 
+- [Workstation migration implementation plan](implementation.md)
 - [T0 — Cross](t0-cross.md)
 - [T1 — Observe](t1-observe.md)
 - [T2 — Compose](t2-compose.md)
