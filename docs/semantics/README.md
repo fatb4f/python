@@ -48,6 +48,9 @@ when primitive conditions create the corresponding decision pressure.
 - [PPF learning model](ppf.md) normalizes the source vocabulary and relations.
 - [Task deconstruction](task-deconstruction.md) reduces a task into admissible
   choices before realization.
+- [Typed Python explorer](typed-python-explorer.md) specializes candidate
+  reduction into a thin PowerShell-like typed inspection/query surface for
+  Python objects and constructs.
 - [Derived patterns](patterns.md) records reusable shapes without becoming a
   conventional pattern catalog.
 
