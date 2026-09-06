@@ -1,8 +1,12 @@
-# T4 project and T5 engineering progression
+# Project and engineering progression
 
-## T4 — Project
+Project scope and engineering maturity are independent of the Xonsh capability
+tiers. A project may begin with T0–T2 shell capabilities, and shell extension
+is never a prerequisite.
 
-At T4 an actual computational problem introduces a library or service:
+## Project
+
+An actual computational problem may introduce a library or service:
 
 ```text
 problem
@@ -20,11 +24,11 @@ document is created in advance.
 Each project owns its dependency boundary and behavioral evidence. The root
 environment should not accumulate every prospective library.
 
-## T5 — Engineer
+## Engineer
 
-T5 begins only when several real uses establish stable semantics and repeated
-friction. A framework, explorer, plugin, xontrib, shared package, or orchestration
-layer must earn its existence through evidence.
+Engineering begins only when several real uses establish stable semantics and
+repeated friction. A framework, explorer, plugin, xontrib, shared package, or
+orchestration layer must earn its existence through evidence.
 
 ```text
 manual use

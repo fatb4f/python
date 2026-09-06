@@ -1,6 +1,7 @@
 # Standard-library exploration
 
-The standard library participates at two different capability tiers.
+The standard library participates in both capability learning and project
+work.
 
 ## T1 — Observation substrate
 
@@ -36,7 +37,7 @@ Useful subjects include `pathlib`, `inspect`, `ast`, `dis`, `tokenize`,
 record limits: imports can execute code, built-ins may lack retrievable source,
 iterators may be consumed, and representations may be unstable.
 
-## T4 — Implementation component
+## Project implementation component
 
 A module becomes a project component only when a concrete task requires its
 operations:
@@ -49,8 +50,8 @@ source structure -> ast / tokenize
 runtime ownership -> inspect / importlib
 ```
 
-At T4 the project must state the module's role, boundary behavior, failure
-contract, and tests. T1 familiarity informs the choice but does not mandate it.
+The project must state the module's role, boundary behavior, failure contract,
+and tests. T1 familiarity informs the choice but does not mandate it.
 
 ## Explorer gate
 

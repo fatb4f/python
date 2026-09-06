@@ -56,10 +56,10 @@ The vertical capability progression is:
 T0 CROSS
   -> T1 OBSERVE
   -> T2 COMPOSE
-  -> T2+ FUNCTIONALIZE
   -> T3 EXTEND
-  -> T4 PROJECT
-  -> T5 ENGINEER
+
+T2+ FUNCTIONALIZE is an optional branch from T2.
+PROJECT -> ENGINEER is an independent scope and maturity progression.
 ```
 
 Start with the [Ops learning guide](docs/ops/README.md). It owns progression

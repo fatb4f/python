@@ -21,7 +21,20 @@ behavioral probe
 
 ## Minimal setup
 
-Rich is installed by the repository environment:
+First choose the runtime that owns the subject:
+
+```text
+stdlib or shell subject
+    -> global Ops Xonsh
+
+project dependency or project object
+    -> project-mode Xonsh launched through uv
+```
+
+Rich must be installed in that same runtime. The workstation plan installs it
+alongside the global Xonsh tool; the repository dependency makes it available
+in project mode. Then inspect the subject without crossing interpreter
+boundaries:
 
 ```xsh
 from rich import inspect as ri

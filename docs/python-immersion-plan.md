@@ -23,14 +23,11 @@ one another without recreating a fixed exercise track.
                        │ continuously applied
                        ▼
 
-T0 CROSS → T1 OBSERVE → T2 COMPOSE → T2+ FUNCTIONALIZE
-                                      ↓
-                                  T3 EXTEND
-                                      ↓
-                                  T4 PROJECT
-                                      ↓
-                                  T5 ENGINEER
+T0 CROSS → T1 OBSERVE → T2 COMPOSE → T3 EXTEND
+                         └→ T2+ FUNCTIONALIZE (optional)
                        XONSH / PYTHON
+
+PROJECT → ENGINEER     independent scope / maturity progression
 ```
 
 The operating loop is:
@@ -134,7 +131,7 @@ Compose values and processes with native Python and Xonsh facilities:
 - aliases and structured-output conversion;
 - explicit composition without hiding representation or effect boundaries.
 
-### T2+ — Functionalize
+### T2+ — Functionalize (optional)
 
 Introduce Coconut only after repeated transformation pressure shows that
 composition, piping, partial application, or higher-order structure is clearer
@@ -164,19 +161,25 @@ Extend shell behavior only after the underlying manual operation is stable:
 Using an ordinary alias earlier in the progression does not imply that custom
 callable-alias infrastructure belongs before T3.
 
-### T4 — Project
+## Scope and maturity progression
+
+Project scope and engineering maturity do not require a particular Xonsh
+capability tier.
+
+### Project
 
 Transition from the learning substrate to actual computational problems.
 Potential project technologies include DuckDB, Ibis, BigQuery, Marimo, Rich,
 Arrow, and OpenTelemetry, but none is a curriculum requirement.
 
-The standard library has a second role at T4: its modules become implementation
-components in concrete tools rather than merely subjects of inspection.
+The standard library has a second role in projects: its modules become
+implementation components in concrete tools rather than merely subjects of
+inspection.
 
 Do not create a document or empty scaffold for every prospective technology.
 A project earns a repository surface when a real problem introduces it.
 
-### T5 — Engineer
+### Engineer
 
 Create reusable frameworks or deeper infrastructure only when accumulated use
 has demonstrated stable semantics, repeated friction, and a measurable benefit
@@ -318,9 +321,9 @@ Responsibilities:
   composition pattern and must not become a conventional pattern glossary.
 - `xonsh/t0-cross.md` through `xonsh/t3-extend.md` own the vertical capability
   progression.
-- `xonsh/progression.md` defines T4 project adoption and T5 engineering gates.
+- `xonsh/progression.md` defines the independent project and engineering gates.
 - `python/stdlib-exploration.md` distinguishes the stdlib's T1 observation role
-  from its T4 implementation role.
+  from its project implementation role.
 
 ## Staged pruning
 

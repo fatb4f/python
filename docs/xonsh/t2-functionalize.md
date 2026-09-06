@@ -1,4 +1,4 @@
-# T2+ — Functionalize
+# T2+ — Functionalize (optional)
 
 Coconut is an optional composition notation over Python values. It belongs
 between native composition and shell extension because it changes how values

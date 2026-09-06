@@ -26,11 +26,12 @@ Arch / session
     |      `-- recovery + POSIX compatibility
     |
     +-- WezTerm
-    |      `-- Xonsh
+    |      `-- global Ops Xonsh
     |             +-- interactive Python
     |             +-- process composition
     |             +-- observation / inspection
-    |             `-- uv-dispatched project commands
+    |             +-- uv-dispatched project commands
+    |             `-- optional project-mode Xonsh through uv
     |
     +-- uv
     |      +-- isolated Python for the Xonsh tool runtime
@@ -47,7 +48,10 @@ Required invariants:
 - POSIX wrapper commands continue to execute through Bash.
 - Existing XDG, PATH, session, and tool environment semantics survive the
   migration.
-- The Python interpreter running Xonsh is independent of project interpreters.
+- The interpreter running the global Ops Xonsh is independent of project
+  interpreters.
+- Interactive imports of project dependencies happen in a project-mode Xonsh
+  or Python process launched through `uv`.
 - `uv run` remains the explicit project-execution boundary.
 - Closing Xonsh loses no durable project semantics.
 - Rollback requires changing only terminal/session realization, not project
@@ -169,6 +173,7 @@ uv-managed CPython
     -> isolated uv tool environment
         -> xonsh
         -> prompt-toolkit support
+        -> Rich or another explicitly selected inspection dependency
         -> qualified xontrib dependencies
 ```
 
@@ -179,7 +184,7 @@ Conceptual bootstrap:
 
 ```bash
 uv python install <baseline-python>
-uv tool install --python <baseline-python> 'xonsh[full]'
+uv tool install --python <baseline-python> --with rich 'xonsh[full]'
 ```
 
 Add xontribs with the same declarative uv tool installation rather than
@@ -210,19 +215,29 @@ Inside a uv project:
 
 ```bash
 uv run python -c 'import sys; print(sys.executable)'
+uv run --with xonsh xonsh
 ```
 
-These interpreters may intentionally differ.
+The second command is the explicit project-mode shell for work that needs
+persistent interactive access to project dependencies. It is optional; normal
+project commands should continue to use `uv run` directly.
 
-The useful boundary is:
+Their useful roles are:
 
 ```text
-Xonsh Python
+global Ops Xonsh Python
     persistent interactive runtime
 
 uv project Python
     project execution runtime
+
+project-mode Xonsh
+    project interpreter with Xonsh added for that invocation
 ```
+
+Do not add arbitrary project libraries to the global Xonsh tool environment.
+That would make the shell a hidden project dependency surface and blur which
+interpreter owns imported objects.
 
 ## 4. Implement minimal Xonsh quality of life
 
@@ -355,6 +370,9 @@ and
 Xonsh runs from its isolated uv-managed interpreter
 and
 uv project commands use the project interpreter
+and
+project-mode Xonsh can import project dependencies without changing the global
+shell
 and
 history persists and searches correctly
 and

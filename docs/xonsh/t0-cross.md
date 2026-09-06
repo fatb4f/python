@@ -63,6 +63,11 @@ The realization may be a Python expression, Xonsh expression, subprocess, or a
 combination. Preserve exit status, stdout/stderr distinctions, path identity,
 and parsing failures when the contract observes them.
 
+`Path.is_file()` is suitable only for best-effort filtering: Python 3.14
+returns `False` when the metadata lookup raises `OSError`. When the contract
+requires filesystem failures to remain visible, call `stat()` with explicit
+error handling and apply the regular-file predicate to the returned mode.
+
 ## Completion evidence
 
 T0 is established when these feel ordinary:

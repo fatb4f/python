@@ -151,29 +151,32 @@ PPF supplies the questions that drive reduction:
 
 ## Semantic refinement and feedback
 
-The task model can be understood as lightweight lattice plumbing over a
-partially known world.
+The task model distinguishes changing external state from accumulated
+evidence about that state.
 
 ```text
-Wₙ
-    current modeled world
+Eₙ
+    external state at step n; it may change non-monotonically
+
+Kₙ
+    accumulated observations, with time and provenance
 
 G
     desired RESULT / postcondition
 
-C(Wₙ)
-    constraints induced by the current world
+C(Kₙ)
+    constraints derived from evidence and declared assumptions
 
-A(Wₙ)
+A(Kₙ)
     actions or realizations admissible under those constraints
 
-J(a, Wₙ)
+J(a, Kₙ)
     policy or observable cost used only among admissible choices
 ```
 
-The model supplies assumptions about the world. Constraint analysis determines
-what remains admissible. Execution and observation test those assumptions and
-provide evidence for assertions.
+The model supplies assumptions about external state. Constraint analysis
+determines what remains admissible. Execution and observation test those
+assumptions and add provenance-bearing evidence to the knowledge record.
 
 ```text
 model / assumptions
@@ -199,55 +202,63 @@ satisfies the relevant predicate or postcondition.
 The admissible set is:
 
 ```text
-A(Wₙ) = {a | constraints(Wₙ, a) hold}
+A(Kₙ) = {a | constraints(Kₙ, a) hold}
 ```
 
 Selection is conceptually:
 
 ```text
 aₙ = simplest or lowest-cost adequate a
-     subject to a ∈ A(Wₙ)
+     subject to a ∈ A(Kₙ)
 ```
 
-Execution yields an observation that may refine the modeled world:
+Execution may change external state and yields an observation:
 
 ```text
 aₙ
  ↓
-external system
+Eₙ -> external system -> Eₙ₊₁
  ↓
 observation oₙ
  ↓
-validate / admit
+validate / record with provenance
  ↓
-Wₙ₊₁
+Kₙ₊₁
 ```
 
-The useful information-order invariant is:
+External state is not monotonic: files disappear, processes exit, and
+configuration changes. A current-state assertion may therefore expire or be
+retracted when newer evidence contradicts it.
+
+The evidence record can still grow monotonically:
 
 ```text
-Wₙ ⊑ Wₙ₊₁
+Kₙ ⊑ Kₙ₊₁
 ```
 
-where an admitted successor contains at least the established information of
-its predecessor. Contradictory evidence must remain observable rather than
-silently rewriting an established fact.
+The successor retains earlier observations and their provenance while adding
+new evidence. Contradiction revises the current-state model without erasing
+the fact that the earlier observation occurred.
 
-There are two complementary views of refinement:
+Within one selection step, applying additional constraints shrinks the
+candidate set:
 
 ```text
-constraints shrink the feasible world
-
 S₀ ⊒ S₁ ⊒ S₂ ⊒ ... ⊒ S*
-
-while evidence grows the known world
-
-W₀ ⊑ W₁ ⊑ W₂ ⊑ ... ⊑ W*
 ```
 
-This is enough lattice structure for ordinary task reasoning: information
-order, refinement, admission/join, and contradiction. A reusable formal
-mechanism is only warranted when repeated use requires one.
+Across steps, changing external state and revised claims may either expand or
+shrink the admissible set. Independently, the evidence record grows:
+
+```text
+K₀ ⊑ K₁ ⊑ K₂ ⊑ ... ⊑ K*
+```
+
+This information order applies to the evidence record, not to the external
+system or every assertion derived from it. Ordinary tasks need only record the
+observation, its provenance, and whether it supports, expires, or contradicts
+a current claim. A formal lattice mechanism is warranted only when repeated
+use requires one.
 
 ## Representation decisions
 
@@ -311,7 +322,7 @@ Do not use complexity notation as detached trivia.
 
 1. State intent.
 2. Identify WHAT.
-3. Establish CONTEXT and the current modeled world `Wₙ`.
+3. Establish CONTEXT, relevant external state `Eₙ`, and current knowledge `Kₙ`.
 4. Declare the RESULT postcondition `G`.
 5. Choose exploratory, targeted, or surgical precision.
 6. Identify assumptions, constraints, and invariants.
@@ -323,8 +334,8 @@ Do not use complexity notation as detached trivia.
 11. Execute while preserving boundary and failure evidence.
 12. Observe the result.
 13. Validate the observation against the original predicates and postcondition.
-14. Admit supported assertions into `Wₙ₊₁`; keep contradictions observable.
-15. Revise assumptions or the semantic model when evidence contradicts them.
+14. Record evidence and provenance in `Kₙ₊₁`; keep contradictions observable.
+15. Confirm, expire, or retract current-state assertions as evidence requires.
 16. Repeat until the RESULT postcondition holds or no admissible realization
     remains.
 

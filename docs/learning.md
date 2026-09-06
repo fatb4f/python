@@ -12,14 +12,11 @@ Python Immersion combines two independent axes:
                        │ continuously applied
                        ▼
 
-T0 CROSS → T1 OBSERVE → T2 COMPOSE → T2+ FUNCTIONALIZE
-                                      ↓
-                                  T3 EXTEND
-                                      ↓
-                                  T4 PROJECT
-                                      ↓
-                                  T5 ENGINEER
+T0 CROSS → T1 OBSERVE → T2 COMPOSE → T3 EXTEND
+                         └→ T2+ FUNCTIONALIZE (optional)
                        XONSH / PYTHON
+
+PROJECT → ENGINEER     independent scope / maturity axis
 ```
 
 The semantic axis asks what kind of computational thing is present. The
@@ -68,7 +65,8 @@ REAL COMPUTATION
 ```
 
 The standard library spans the last two layers. At T1 it is an object and API
-exploration substrate. At T4 its modules become components of real tools.
+exploration substrate. In projects its modules become components of real
+tools.
 
 ## Operational spine
 
@@ -87,10 +85,16 @@ determines what to practice next.
 | T0 Cross | Move deliberately between subprocess results, Python values, paths, environment state, and structured representations. |
 | T1 Observe | Inspect runtime identity, representation, namespace, documentation, signature, source, and behavior. |
 | T2 Compose | Combine native Python and Xonsh operations without hiding their boundaries. |
-| T2+ Functionalize | Adopt Coconut only where demonstrated transformation pressure makes functional notation clearer. |
 | T3 Extend | Change shell behavior with callable aliases, macros, events, completers, or interaction hooks. |
-| T4 Project | Introduce libraries because an actual computational problem requires them. |
-| T5 Engineer | Build reusable infrastructure only after repeated use and evaluation justify it. |
+
+T2+ Functionalize is an optional branch from T2. Adopt Coconut only where
+demonstrated transformation pressure makes functional notation clearer; it is
+not required before T3.
+
+Project and Engineer form a separate scope and maturity progression. Projects
+introduce libraries when an actual computational problem requires them.
+Engineering builds reusable infrastructure only after repeated use and
+evaluation justify it. Neither requires a particular shell-extension tier.
 
 No tier requires abstractions from a later tier.
 
