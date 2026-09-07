@@ -1,0 +1,37 @@
+[
+  {"name":"python","color":"1d76db","description":"Managed Python Immersion tracker issue"},
+  {"name":"origin:engineering","color":"0e8a16","description":"Planned engineering intent"},
+  {"name":"origin:evidence","color":"5319e7","description":"Concern admitted from evaluation evidence"},
+
+  {"name":"entity:learning","color":"c5def5","description":"Learning or semantic-practice model"},
+  {"name":"entity:runtime","color":"c5def5","description":"Python, Xonsh, or execution runtime"},
+  {"name":"entity:environment","color":"c5def5","description":"Login, shell, project, or session environment"},
+  {"name":"entity:tooling","color":"c5def5","description":"Developer or learning tooling"},
+  {"name":"entity:workflow","color":"c5def5","description":"Operational workflow or progression"},
+  {"name":"entity:project","color":"c5def5","description":"Bounded project realization"},
+  {"name":"entity:contract","color":"c5def5","description":"Normative contract or schema"},
+  {"name":"entity:adapter","color":"c5def5","description":"Integration or projection adapter"},
+
+  {"name":"state:backlog","color":"d4c5f9","description":"Admitted but not ready"},
+  {"name":"state:ready","color":"0075ca","description":"Ready for bounded execution"},
+  {"name":"state:in-progress","color":"fbca04","description":"Execution has begun"},
+  {"name":"state:blocked","color":"d73a4a","description":"Blocked by an explicit dependency or condition"},
+  {"name":"state:done","color":"0e8a16","description":"Acceptance or resolution semantics satisfied"},
+  {"name":"state:suppressed","color":"e6e6e6","description":"Intentionally suppressed without claiming completion"},
+
+  {"name":"priority:p0","color":"b60205","description":"Critical ordering priority"},
+  {"name":"priority:p1","color":"d93f0b","description":"High ordering priority"},
+  {"name":"priority:p2","color":"fbca04","description":"Normal ordering priority"},
+  {"name":"priority:p3","color":"cfd3d7","description":"Low ordering priority"},
+
+  {"name":"work:architecture","color":"bfdadc","description":"Architecture boundary or model"},
+  {"name":"work:schema","color":"bfdadc","description":"Schema or contract surface"},
+  {"name":"work:realization","color":"bfdadc","description":"Concrete realization"},
+  {"name":"work:projection","color":"bfdadc","description":"Projection between representations"},
+  {"name":"work:adapter","color":"bfdadc","description":"Adapter implementation"},
+  {"name":"work:integration","color":"bfdadc","description":"Integration across existing boundaries"},
+  {"name":"work:qualification","color":"bfdadc","description":"Qualification or evaluation work"},
+  {"name":"work:migration","color":"bfdadc","description":"Migration between qualified states"},
+  {"name":"work:documentation","color":"bfdadc","description":"Documentation realization"},
+  {"name":"work:investigation","color":"bfdadc","description":"Bounded investigation"}
+]

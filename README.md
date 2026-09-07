@@ -79,6 +79,20 @@ through concrete terminal operations while composing
 Candidate project substrates include DuckDB, Ibis, BigQuery, Marimo, Arrow,
 Rich, and OpenTelemetry. They are possibilities, not curriculum requirements.
 
+## Engineering tracking
+
+Durable engineering work is tracked through GitHub Issues as an operational
+projection, not as semantic authority. The typed tracking contract is
+[`contracts/state/tracker.cue`](contracts/state/tracker.cue), with projection
+and reconciliation procedure in
+[`.github/ISSUES/AGENTS.md`](.github/ISSUES/AGENTS.md).
+
+Managed issues correlate by stable `python-issue-key` markers rather than title
+or GitHub issue number. The repository-managed labels are deliberately
+low-cardinality projections of origin, entity kind, state, priority, and work
+class. Executable `runtime.slice.v0` child issues remain separate handoff
+artifacts whose JSON bodies must stay valid.
+
 ## Escalation rule
 
 ```text

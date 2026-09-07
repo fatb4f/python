@@ -1,0 +1,49 @@
+name: Sync managed issue labels
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/ISSUES/labels.json
+      - .github/workflows/sync-issue-labels.yml
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Reconcile managed label catalog
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import subprocess
+          from pathlib import Path
+
+          labels = json.loads(Path(".github/ISSUES/labels.json").read_text())
+          seen = set()
+          for label in labels:
+              name = label["name"]
+              if name in seen:
+                  raise SystemExit(f"duplicate managed label: {name}")
+              seen.add(name)
+              subprocess.run(
+                  [
+                      "gh", "label", "create", name,
+                      "--repo", os.environ["GH_REPO"],
+                      "--color", label["color"],
+                      "--description", label["description"],
+                      "--force",
+                  ],
+                  check=True,
+              )
+          PY
