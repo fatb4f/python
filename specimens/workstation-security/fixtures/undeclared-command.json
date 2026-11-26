@@ -1,0 +1,1 @@
+{"commandGrants": [{"source": "operator", "target": "developer", "kind": "command", "executable": "/usr/local/bin/example-operation", "arguments": [], "interactive": false}], "interactiveGrants": []}

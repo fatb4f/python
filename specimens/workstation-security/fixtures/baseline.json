@@ -1,0 +1,19 @@
+{
+  "identities": {
+    "_404": {"name": "_404", "role": "administration", "interactiveLogin": true},
+    "operator": {"name": "operator", "role": "operator", "interactiveLogin": true},
+    "developer": {"name": "developer", "role": "development", "interactiveLogin": false},
+    "chatgpt": {"name": "chatgpt", "role": "application", "interactiveLogin": false},
+    "observer": {"name": "observer", "role": "observation", "interactiveLogin": false},
+    "root": {"name": "root", "role": "system", "interactiveLogin": false}
+  },
+  "authority": {"commandGrants": [], "interactiveGrants": []},
+  "assets": {
+    "contract": {"role": "contract", "location": "unresolved", "ownership": "unresolved", "workloadMayModify": false},
+    "bootstrap": {"role": "bootstrap", "location": "unresolved", "ownership": "unresolved", "workloadMayModify": false},
+    "sudoPolicy": {"role": "sudo-policy", "location": "unresolved", "ownership": "unresolved", "workloadMayModify": false},
+    "applicationCredentials": {"role": "application-credentials", "location": "unresolved", "ownership": "unresolved", "workloadMayModify": false},
+    "integrityEvidence": {"role": "integrity-evidence", "location": "unresolved", "ownership": "unresolved", "workloadMayModify": false}
+  },
+  "recovery": {"administrator": "_404", "status": "unverified", "independentAccessVerified": false, "rollbackVerified": false, "provisioningAllowed": false}
+}

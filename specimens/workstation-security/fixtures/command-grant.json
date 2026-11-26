@@ -1,0 +1,1 @@
+{"source": "operator", "target": "developer", "kind": "command", "executable": "/usr/local/bin/example-operation", "arguments": ["--example"], "interactive": false}
